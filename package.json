@@ -1,0 +1,16 @@
+{
+  "name": "cursiaweb-front",
+  "version": "1.0.0",
+  "description": "Cursia.ai — Plataforma de producción educativa con IA para Moodle",
+  "private": true,
+  "scripts": {
+    "dev": "npx serve public -p 3000 --no-clipboard",
+    "preview": "npx serve public -p 4173 --no-clipboard",
+    "build": "echo 'Static site — no build step required. Output directory: public/'"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": ["cursia", "moodle", "elearning", "ia", "cursos-virtuales"],
+  "license": "UNLICENSED"
+}

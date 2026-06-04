@@ -1,0 +1,11 @@
+# Cloudflare Pages — Redirects
+# Formato: [origen] [destino] [código HTTP]
+
+# Rutas internas que aún no tienen página propia → redirigen a inicio
+/consultoria    /   302
+/piloto         /   302
+/privacy        /   302
+/terms          /   302
+
+# Cualquier otra ruta no encontrada → página principal
+/*              /   200
