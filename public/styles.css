@@ -1698,11 +1698,136 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   opacity: 1;
 }
 
-@media (max-width: 480px) {
-  .trust-logos { gap: 14px; }
-  .trust-logo-card { padding: 16px 28px; }
-  .trust-logo-card img { max-height: 40px; }
+/* .hide-mobile referenced in trust section <br> tag */
+@media (max-width: 768px) {
   .hide-mobile { display: none; }
+  .trust-logo-card img { max-height: 40px; }
+}
+
+/* ============================================================
+   MOBILE RESPONSIVE IMPROVEMENTS
+   Breakpoints: 1024px · 768px · 480px · 360px
+   Desktop layout is untouched above 1024px.
+   ============================================================ */
+
+/* ---- 1024px: laptops pequeños y tablets landscape ---- */
+@media (max-width: 1024px) {
+  .section-head { margin-bottom: 44px; }
+  .hero-visual { min-height: 460px; }
+  .mockup-body { min-height: 400px; }
+}
+
+/* ---- 768px: tablets portrait ---- */
+@media (max-width: 768px) {
+  /* Reducir padding de secciones */
+  section        { padding: 72px 0; }
+  section.tight  { padding: 52px 0; }
+
+  /* Hero */
+  .hero          { padding-top: 48px; padding-bottom: 64px; }
+  .hero h1       { font-size: clamp(34px, 7vw, 52px); }
+  .hero-visual   { min-height: 360px; }
+  .mockup-body   { min-height: 300px; }
+
+  /* Ocultar floating cards — evitan overflow en tablet y móvil */
+  .float-card    { display: none; }
+
+  /* Tabla de comparación: aún en tabla pero más compacta */
+  .comparison-callout { flex-direction: column; align-items: flex-start; }
+}
+
+/* ---- 480px: móviles ---- */
+@media (max-width: 480px) {
+  /* Padding de contenedor un poco más ajustado */
+  :root { --pad-x: 18px; }
+
+  /* Secciones */
+  section       { padding: 56px 0; }
+  section.tight { padding: 40px 0; }
+  .section-head { margin-bottom: 32px; }
+
+  /* Títulos de sección: máximo 28px en móvil */
+  .section-title { font-size: 28px; letter-spacing: -0.02em; }
+
+  /* Hero: text + visual más compactos */
+  .hero          { padding-top: 36px; padding-bottom: 52px; }
+  .hero-grid     { gap: 40px; }
+  .hero h1       { font-size: clamp(30px, 8.5vw, 42px); }
+  .hero-sub      { font-size: 15px; }
+  .hero-visual   { min-height: 280px; }
+  .mockup-body   { min-height: 240px; }
+  .hero-eyebrow  { font-size: 12px; gap: 8px; flex-wrap: wrap; }
+
+  /* CTAs del hero: ancho completo y apilados */
+  .hero-cta { flex-direction: column; align-items: stretch; gap: 10px; }
+  .hero-cta .btn { width: 100%; justify-content: center; }
+
+  /* Microproof: columna en móvil */
+  .hero-microproof {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-top: 20px;
+  }
+
+  /* Header nav: botón "Solicitar demo" más compacto */
+  .nav-cta .btn-primary { font-size: 13px; padding: 8px 12px; }
+
+  /* Mobile menu: botones de ancho completo */
+  .mobile-menu .mobile-cta .btn { width: 100%; justify-content: center; }
+
+  /* Trust: logos apilados verticalmente */
+  .trust-logos        { flex-direction: column; align-items: stretch; gap: 12px; }
+  .trust-logo-card    { width: 100%; max-width: 100%; padding: 14px 24px; }
+
+  /* Pipeline: ya va vertical, solo ajustar arrow */
+  .pipeline-step { padding: 16px; }
+
+  /* Offer cards: botón full width */
+  .offer-card .btn     { align-self: stretch; justify-content: center; }
+  .offer-card          { padding: 24px 20px; }
+
+  /* Pricing: ancho completo */
+  .pricing-grid { max-width: 100%; }
+  .plan         { padding: 28px 22px; }
+
+  /* FAQ: texto de pregunta un poco menor */
+  .faq-q        { font-size: 14.5px; padding: 18px 4px; gap: 14px; }
+  /* Más espacio para respuestas largas en móvil */
+  .faq-item.open .faq-a { max-height: 600px; }
+  .faq-a-inner  { font-size: 14px; }
+
+  /* Final CTA */
+  .final-cta   { padding: 40px 20px; }
+  .final-cta h2 { font-size: clamp(24px, 6.5vw, 32px); }
+  .btn-row {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .btn-row .btn { width: 100%; justify-content: center; }
+
+  /* Footer */
+  .site-footer       { padding: 56px 0 28px; }
+  .footer-grid       { margin-bottom: 40px; }
+  .footer-bottom     { flex-direction: column; align-items: flex-start; gap: 6px; }
+
+  /* Includes grid: 2 columnas en lugar de 1 en móvil pequeño */
+  .includes-grid     { grid-template-columns: repeat(2, 1fr); }
+
+  /* Use cases: 2 columnas */
+  .usecase-grid      { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---- 360px: móviles muy pequeños ---- */
+@media (max-width: 360px) {
+  :root { --pad-x: 14px; }
+  .hero h1          { font-size: 28px; }
+  .section-title    { font-size: 24px; }
+  .includes-grid    { grid-template-columns: 1fr; }
+  .usecase-grid     { grid-template-columns: 1fr; }
+  .trust-logo-card  { padding: 12px 16px; }
+  .nav-cta .btn-primary { display: none; } /* en 360px solo queda el hamburguesa */
 }
 
 /* Reduced motion — respect user preference */
