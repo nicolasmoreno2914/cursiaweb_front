@@ -75,6 +75,134 @@
   });
 
   // ----------------------------------------------------------
+  // Course showcase carousel
+  // ----------------------------------------------------------
+  (function () {
+    var showcase = document.querySelector('.showcase');
+    if (!showcase) return;
+
+    var slides    = Array.prototype.slice.call(showcase.querySelectorAll('.showcase-slide'));
+    var dots      = Array.prototype.slice.call(showcase.querySelectorAll('.showcase-dot'));
+    var prevBtn   = showcase.querySelector('.showcase-prev');
+    var nextBtn   = showcase.querySelector('.showcase-next');
+    var counter   = showcase.querySelector('.showcase-counter');
+    var capTitle  = showcase.querySelector('.showcase-caption-title');
+    var capDesc   = showcase.querySelector('.showcase-caption-desc');
+    var total     = slides.length;
+    var current   = 0;
+    var autoTimer = null;
+    var isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var DATA = [
+      {
+        num: '01',
+        title: 'Vista general del curso',
+        desc: 'Presentación del curso con módulos, capítulos, duración, objetivos y estructura general.'
+      },
+      {
+        num: '02',
+        title: 'Audiolibro integrado',
+        desc: 'El contenido puede convertirse en experiencia auditiva para reforzar el aprendizaje.'
+      },
+      {
+        num: '03',
+        title: 'Videos interactivos',
+        desc: 'Lecciones visuales con contenido guiado, ejemplos y apoyo multimedia.'
+      },
+      {
+        num: '04',
+        title: 'Contenido audiovisual por capítulo',
+        desc: 'Cada capítulo puede incluir videos explicativos adaptados al tema del curso.'
+      },
+      {
+        num: '05',
+        title: 'Actividades gamificadas',
+        desc: 'Preguntas, retos y actividades interactivas para validar el aprendizaje.'
+      }
+    ];
+
+    function goTo(n) {
+      if (n < 0) n = total - 1;
+      if (n >= total) n = 0;
+
+      // Update slides
+      slides[current].classList.remove('active');
+      slides[n].classList.add('active');
+
+      // Update dots
+      dots[current].classList.remove('active');
+      dots[current].setAttribute('aria-selected', 'false');
+      dots[n].classList.add('active');
+      dots[n].setAttribute('aria-selected', 'true');
+
+      // Update caption
+      var d = DATA[n];
+      if (counter)  counter.textContent  = d.num + ' / 0' + total;
+      if (capTitle) capTitle.textContent = d.title;
+      if (capDesc)  capDesc.textContent  = d.desc;
+
+      current = n;
+    }
+
+    // Arrow buttons
+    if (prevBtn) prevBtn.addEventListener('click', function () {
+      goTo(current - 1);
+      resetAuto();
+    });
+    if (nextBtn) nextBtn.addEventListener('click', function () {
+      goTo(current + 1);
+      resetAuto();
+    });
+
+    // Dot clicks
+    dots.forEach(function (dot, i) {
+      dot.addEventListener('click', function () {
+        goTo(i);
+        resetAuto();
+      });
+    });
+
+    // Keyboard navigation (left/right) when showcase is focused/hovered
+    showcase.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowLeft')  { goTo(current - 1); resetAuto(); }
+      if (e.key === 'ArrowRight') { goTo(current + 1); resetAuto(); }
+    });
+
+    // Touch / swipe support
+    var touchStartX = 0;
+    var touchEndX   = 0;
+    showcase.addEventListener('touchstart', function (e) {
+      touchStartX = e.changedTouches[0].clientX;
+    }, { passive: true });
+    showcase.addEventListener('touchend', function (e) {
+      touchEndX = e.changedTouches[0].clientX;
+      var diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) {
+        goTo(diff > 0 ? current + 1 : current - 1);
+        resetAuto();
+      }
+    }, { passive: true });
+
+    // Autoplay (5s, skip if reduced-motion)
+    function startAuto() {
+      if (isReducedMotion) return;
+      autoTimer = setInterval(function () { goTo(current + 1); }, 5000);
+    }
+    function resetAuto() {
+      clearInterval(autoTimer);
+      startAuto();
+    }
+
+    // Pause on hover / focus
+    showcase.addEventListener('mouseenter', function () { clearInterval(autoTimer); });
+    showcase.addEventListener('mouseleave', function () { startAuto(); });
+    showcase.addEventListener('focusin',    function () { clearInterval(autoTimer); });
+    showcase.addEventListener('focusout',   function () { startAuto(); });
+
+    startAuto();
+  })();
+
+  // ----------------------------------------------------------
   // Reveal on scroll
   //
   // Strategy:
