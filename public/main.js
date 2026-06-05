@@ -97,27 +97,27 @@
       {
         num: '01',
         title: 'Vista general del curso',
-        desc: 'Presentación del curso con módulos, capítulos, duración, objetivos y estructura general.'
+        desc: 'Presentación del curso con unidades, capítulos, duración, objetivos y estructura general.'
       },
       {
         num: '02',
-        title: 'Audiolibro integrado',
-        desc: 'El contenido puede convertirse en experiencia auditiva para reforzar el aprendizaje.'
+        title: 'Versión en audio del curso',
+        desc: 'El contenido también puede escucharse para reforzar el aprendizaje de forma práctica.'
       },
       {
         num: '03',
-        title: 'Videos interactivos',
-        desc: 'Lecciones visuales con contenido guiado, ejemplos y apoyo multimedia.'
+        title: 'Videos por lección',
+        desc: 'Lecciones visuales con explicación guiada, ejemplos y apoyo multimedia.'
       },
       {
         num: '04',
         title: 'Contenido audiovisual por capítulo',
-        desc: 'Cada capítulo puede incluir videos explicativos adaptados al tema del curso.'
+        desc: 'Cada capítulo puede tener videos explicativos adaptados al tema del curso.'
       },
       {
         num: '05',
-        title: 'Actividades gamificadas',
-        desc: 'Preguntas, retos y actividades interactivas para validar el aprendizaje.'
+        title: 'Actividades interactivas',
+        desc: 'Juegos, retos y preguntas para practicar y validar lo aprendido.'
       }
     ];
 
