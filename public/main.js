@@ -106,13 +106,13 @@
       },
       {
         num: '03',
-        title: 'Videos por lección',
-        desc: 'Lecciones visuales con explicación guiada, ejemplos y apoyo multimedia.'
+        title: 'Videos educativos por capítulo',
+        desc: 'Cursia puede generar videos explicativos para acompañar los temas principales del curso y reforzar la comprensión del estudiante.'
       },
       {
         num: '04',
-        title: 'Contenido audiovisual por capítulo',
-        desc: 'Cada capítulo puede tener videos explicativos adaptados al tema del curso.'
+        title: 'Lecciones en video adaptadas al tema',
+        desc: 'Cada capítulo puede tener su propio video educativo con explicación visual, ejemplos y narrativa adaptada al contenido.'
       },
       {
         num: '05',
