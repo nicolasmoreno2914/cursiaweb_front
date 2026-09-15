@@ -291,11 +291,20 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
 
 /* Mobile menu */
 .mobile-menu {
-  display: none;
-  padding: 16px 0 22px;
-  border-top: 1px solid var(--border-1);
+  display: grid;
+  grid-template-rows: 0fr;
+  border-top: 1px solid transparent;
+  transition: grid-template-rows 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
 }
-.mobile-menu.open { display: block; }
+.mobile-menu.open {
+  grid-template-rows: 1fr;
+  border-top-color: var(--border-1);
+}
+.mobile-menu-inner {
+  overflow: hidden;
+  min-height: 0;
+  padding: 16px 0 22px;
+}
 .mobile-menu a {
   display: block;
   padding: 12px 0;
@@ -1418,6 +1427,9 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   color: var(--text-4);
   font-size: 13.5px;
   margin-top: 28px;
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ============================================================
@@ -1462,12 +1474,14 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   border-color: transparent;
 }
 .faq-a {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
-.faq-item.open .faq-a { max-height: 300px; }
+.faq-item.open .faq-a { grid-template-rows: 1fr; }
 .faq-a-inner {
+  overflow: hidden;
+  min-height: 0;
   padding: 0 4px 22px;
   color: var(--text-3);
   font-size: 15px;
@@ -1585,11 +1599,53 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
 .reveal {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 .reveal.in {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Staggered children: these containers reveal their items one at a time
+   instead of the whole grid fading in as a single flat block. The
+   wrapper itself stays put; only its direct children animate. */
+.problem-list.reveal,
+.service-grid.reveal,
+.pricing-grid.reveal,
+.case-details.reveal,
+.steps-grid.reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+.problem-list.reveal > *,
+.service-grid.reveal > *,
+.pricing-grid.reveal > *,
+.case-details.reveal > *,
+.steps-grid.reveal > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.problem-list.reveal.in > *,
+.service-grid.reveal.in > *,
+.pricing-grid.reveal.in > *,
+.case-details.reveal.in > *,
+.steps-grid.reveal.in > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+.problem-list.reveal > *:nth-child(1), .service-grid.reveal > *:nth-child(1), .pricing-grid.reveal > *:nth-child(1), .case-details.reveal > *:nth-child(1), .steps-grid.reveal > *:nth-child(1) { transition-delay: 0ms; }
+.problem-list.reveal > *:nth-child(2), .service-grid.reveal > *:nth-child(2), .pricing-grid.reveal > *:nth-child(2), .case-details.reveal > *:nth-child(2), .steps-grid.reveal > *:nth-child(2) { transition-delay: 50ms; }
+.problem-list.reveal > *:nth-child(3), .service-grid.reveal > *:nth-child(3), .pricing-grid.reveal > *:nth-child(3), .case-details.reveal > *:nth-child(3), .steps-grid.reveal > *:nth-child(3) { transition-delay: 100ms; }
+.problem-list.reveal > *:nth-child(4), .service-grid.reveal > *:nth-child(4), .steps-grid.reveal > *:nth-child(4) { transition-delay: 150ms; }
+.problem-list.reveal > *:nth-child(5), .service-grid.reveal > *:nth-child(5) { transition-delay: 200ms; }
+.service-grid.reveal > *:nth-child(6) { transition-delay: 250ms; }
+.service-grid.reveal > *:nth-child(7) { transition-delay: 300ms; }
+@media (prefers-reduced-motion: reduce) {
+  .problem-list.reveal > *, .service-grid.reveal > *, .pricing-grid.reveal > *, .case-details.reveal > *, .steps-grid.reveal > * {
+    transition-delay: 0ms !important;
+  }
 }
 
 /* ============================================================
@@ -1906,6 +1962,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   font-size: 14px;
   color: var(--text-3);
   line-height: 1.55;
+  max-width: 65ch;
 }
 
 /* Dot indicators */
@@ -2055,7 +2112,6 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   /* FAQ: texto de pregunta un poco menor */
   .faq-q        { font-size: 14.5px; padding: 18px 4px; gap: 14px; }
   /* Más espacio para respuestas largas en móvil */
-  .faq-item.open .faq-a { max-height: 600px; }
   .faq-a-inner  { font-size: 14px; }
 
   /* Final CTA */
