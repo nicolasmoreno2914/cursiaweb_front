@@ -1,0 +1,30 @@
+# Copy this file to .dev.vars for local `npm run dev` testing.
+# .dev.vars is gitignored — never commit real secrets.
+# In production, set these as Cloudflare Pages environment variables/secrets
+# instead (dashboard, or `wrangler pages secret put <NAME>`).
+
+# --- Required --------------------------------------------------------------
+
+# Same service account already used by the cursia-landing Pages project —
+# no need to create a new one in Google Cloud. From that project's JSON key:
+# client_email.
+GOOGLE_SERVICE_ACCOUNT_EMAIL=cursia-leads@your-project.iam.gserviceaccount.com
+
+# Same JSON key's private_key, PEM format, including the BEGIN/END lines.
+# When pasting into `wrangler pages secret put` or the Cloudflare dashboard,
+# keep the literal "\n" sequences as-is (this Function unescapes them) — do
+# not replace them with real newlines.
+GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY="-----BEGIN PRIVATE KEY-----\nREPLACE_ME\n-----END PRIVATE KEY-----\n"
+
+# This site's own origin (used for the CORS response header).
+ALLOWED_ORIGIN=http://localhost:4601
+
+# --- Optional ----------------------------------------------------------------
+
+# Set to "development" to skip Turnstile verification entirely while no real
+# Turnstile keys exist yet. Leave unset (or set to "production") once they do.
+ENVIRONMENT=development
+
+# From the Cloudflare Turnstile dashboard. Only the secret key is ever put
+# here — the site key is public and lives in the frontend.
+TURNSTILE_SECRET_KEY=

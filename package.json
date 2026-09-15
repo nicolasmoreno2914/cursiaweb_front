@@ -1,16 +1,21 @@
 {
   "name": "cursiaweb-front",
   "version": "1.0.0",
-  "description": "Cursia.ai — Plataforma de producción educativa con IA para Moodle",
+  "description": "Cursia — transformación digital educativa para instituciones. Sitio estático + Cloudflare Pages Function para /api/leads (diagnóstico institucional).",
   "private": true,
   "scripts": {
-    "dev": "npx serve public -p 3000 --no-clipboard",
+    "dev": "wrangler pages dev public --port 4601",
+    "dev:static": "npx serve public -p 3000 --no-clipboard",
     "preview": "npx serve public -p 4173 --no-clipboard",
+    "deploy": "wrangler pages deploy public",
     "build": "echo 'Static site — no build step required. Output directory: public/'"
+  },
+  "devDependencies": {
+    "wrangler": "^3"
   },
   "engines": {
     "node": ">=18"
   },
-  "keywords": ["cursia", "moodle", "elearning", "ia", "cursos-virtuales"],
+  "keywords": ["cursia", "moodle", "elearning", "cursos-virtuales", "instituciones"],
   "license": "UNLICENSED"
 }

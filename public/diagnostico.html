@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Diagnóstico gratuito de potencial digital institucional — Cursia</title>
+  <meta name="description" content="Agenda un diagnóstico gratuito de 30 minutos y descubre cuántos cursos digitales podría tener tu institución este trimestre. 10 preguntas, menos de 3 minutos." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Diagnóstico gratuito de potencial digital institucional — Cursia" />
+  <meta property="og:description" content="10 preguntas, menos de 3 minutos. Te decimos qué tan lista está tu institución para digitalizar su oferta académica." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://somoscursia.nomaddi.com/diagnostico" />
+  <meta property="og:image" content="https://somoscursia.nomaddi.com/images/logo-cursia-primary.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Diagnóstico gratuito de potencial digital institucional — Cursia" />
+  <meta name="twitter:description" content="10 preguntas, menos de 3 minutos. Te decimos qué tan lista está tu institución para digitalizar su oferta académica." />
+  <meta name="twitter:image" content="https://somoscursia.nomaddi.com/images/logo-cursia-primary.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://somoscursia.nomaddi.com/diagnostico" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="page-bg" aria-hidden="true"></div>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="brand" href="/" aria-label="Cursia — Inicio">
+        <img src="images/logo-cursia-primary.png" alt="Cursia" width="640" height="213" />
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/#how">Cómo funciona</a></li>
+        <li><a href="/#pricing">Planes</a></li>
+        <li><a href="/#case-study">Caso real</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a class="btn btn-ghost btn-sm" href="/#app">Ingresar a la app</a>
+        <a class="btn btn-primary btn-sm" href="#diagnostico">
+          Empezar diagnóstico
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menú móvil">
+      <a href="/">Inicio</a>
+      <a href="/#how">Cómo funciona</a>
+      <a href="/#pricing">Planes</a>
+      <a href="/#case-study">Caso real</a>
+      <a href="/nosotros">Nosotros</a>
+      <div class="mobile-cta">
+        <a class="btn btn-ghost" href="/#app">Ingresar a la app</a>
+        <a class="btn btn-primary" href="#diagnostico">Empezar diagnóstico</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================================================
+     INTRO
+     ============================================================ -->
+<section aria-labelledby="diag-heading">
+  <div class="container">
+    <div class="section-head center reveal" style="max-width: 680px;">
+      <span class="section-eyebrow"><span class="dot" aria-hidden="true"></span>Diagnóstico gratuito</span>
+      <h1 id="diag-heading" class="section-title">Descubre cuánto potencial digital tiene tu institución.</h1>
+      <p class="section-subtitle">10 preguntas, menos de 3 minutos. Te decimos qué tan lista está tu institución para digitalizar su oferta académica — y si aplica, agendamos una llamada.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DIAGNOSTIC FORM
+     ============================================================ -->
+<section class="tight" id="diagnostico" aria-labelledby="diag-heading">
+  <div class="container">
+    <div class="diag-shell reveal">
+
+      <div class="diag-tabs">
+        <button type="button" class="diag-tab active" data-panel="p1" onclick="cursiaTab('p1',this)">1 · Diagnóstico</button>
+        <button type="button" class="diag-tab" data-panel="p2" onclick="cursiaTab('p2',this)">2 · Tus datos</button>
+        <button type="button" class="diag-tab" data-panel="p3" onclick="cursiaTab('p3',this)">3 · Agenda</button>
+      </div>
+
+      <div class="diag-panel active" id="p1">
+        <div class="progress-row"><span class="q-of" id="qOf">Pregunta 1 de 10</span></div>
+        <div class="q-progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="10" aria-valuenow="1"><div class="q-progress-fill" id="qProgressFill" style="width:10%"></div></div>
+
+        <div class="q-step is-active" data-step="1" data-field="orgType">
+          <h3 class="q-title" id="qTitle-1">¿Qué tipo de institución representas?</h3>
+          <p class="q-help">Selecciona la opción que mejor describa a tu institución.</p>
+          <div class="opt-grid" role="group" aria-labelledby="qTitle-1">
+            <button type="button" class="opt-card" data-value="Instituto o institución técnica" aria-pressed="false" onclick="cursiaSelect(this)">Instituto o institución técnica<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Universidad o colegio" aria-pressed="false" onclick="cursiaSelect(this)">Universidad o colegio<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="IETDH" aria-pressed="false" onclick="cursiaSelect(this)">IETDH<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Empresa que ofrece capacitaciones" aria-pressed="false" onclick="cursiaSelect(this)">Empresa que ofrece capacitaciones<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Fundación u organización social" aria-pressed="false" onclick="cursiaSelect(this)">Fundación u organización social<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Entidad pública" aria-pressed="false" onclick="cursiaSelect(this)">Entidad pública<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Consultor o profesional independiente" aria-pressed="false" onclick="cursiaSelect(this)">Consultor o profesional independiente<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Otra" aria-pressed="false" onclick="cursiaSelect(this)">Otra<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+          </div>
+          <p class="q-error" id="qError-1" role="alert" hidden>Selecciona una opción para continuar.</p>
+        </div>
+
+        <div class="q-step" data-step="2" data-field="role">
+          <h3 class="q-title" id="qTitle-2">¿Cuál es tu rol dentro de la institución?</h3>
+          <p class="q-help">Selecciona la opción que mejor describa tu cargo.</p>
+          <div class="opt-grid" role="group" aria-labelledby="qTitle-2">
+            <button type="button" class="opt-card" data-value="Propietario, fundador o representante legal" aria-pressed="false" onclick="cursiaSelect(this)">Propietario, fundador o representante legal<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Rector, director o gerente" aria-pressed="false" onclick="cursiaSelect(this)">Rector, director o gerente<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Director académico" aria-pressed="false" onclick="cursiaSelect(this)">Director académico<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Director de educación virtual, tecnología o innovación" aria-pressed="false" onclick="cursiaSelect(this)">Director de educación virtual, tecnología o innovación<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Coordinador académico" aria-pressed="false" onclick="cursiaSelect(this)">Coordinador académico<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Responsable comercial o de marketing" aria-pressed="false" onclick="cursiaSelect(this)">Responsable comercial o de marketing<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Docente o instructor" aria-pressed="false" onclick="cursiaSelect(this)">Docente o instructor<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Consultor externo" aria-pressed="false" onclick="cursiaSelect(this)">Consultor externo<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Otro" aria-pressed="false" onclick="cursiaSelect(this)">Otro<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+          </div>
+          <p class="q-error" id="qError-2" role="alert" hidden>Selecciona una opción para continuar.</p>
+        </div>
+
+        <div class="q-step" data-step="3" data-field="modality">
+          <h3 class="q-title" id="qTitle-3">¿Cómo ofrecen actualmente sus programas?</h3>
+          <p class="q-help">Selecciona la opción que mejor describa su modalidad actual.</p>
+          <div class="opt-grid" role="group" aria-labelledby="qTitle-3">
+            <button type="button" class="opt-card" data-value="Principalmente presenciales" aria-pressed="false" onclick="cursiaSelect(this)">Principalmente presenciales<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Principalmente mediante clases virtuales en vivo" aria-pressed="false" onclick="cursiaSelect(this)">Principalmente mediante clases virtuales en vivo<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Combinamos presencialidad y clases en vivo" aria-pressed="false" onclick="cursiaSelect(this)">Combinamos presencialidad y clases en vivo<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Ya tenemos algunos cursos de autoaprendizaje" aria-pressed="false" onclick="cursiaSelect(this)">Ya tenemos algunos cursos de autoaprendizaje<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Aún estamos definiendo la modalidad" aria-pressed="false" onclick="cursiaSelect(this)">Aún estamos definiendo la modalidad<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+          </div>
+          <p class="q-error" id="qError-3" role="alert" hidden>Selecciona una opción para continuar.</p>
+        </div>
+
+        <div class="q-step" data-step="4" data-field="objectives">
+          <h3 class="q-title" id="qTitle-4">¿Qué les gustaría lograr?</h3>
+          <p class="q-help">Selecciona todas las opciones que apliquen.</p>
+          <div class="opt-grid" data-multi="true" role="group" aria-labelledby="qTitle-4">
+            <button type="button" class="opt-card" data-value="Implementar una modalidad de autoaprendizaje" aria-pressed="false" onclick="cursiaSelect(this)">Implementar una modalidad de autoaprendizaje<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Digitalizar programas presenciales" aria-pressed="false" onclick="cursiaSelect(this)">Digitalizar programas presenciales<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Aprovechar mejor nuestro campus virtual Moodle" aria-pressed="false" onclick="cursiaSelect(this)">Aprovechar mejor nuestro campus virtual Moodle<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Reducir la dependencia de sedes físicas" aria-pressed="false" onclick="cursiaSelect(this)">Reducir la dependencia de sedes físicas<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Llegar a estudiantes de otras ciudades o regiones" aria-pressed="false" onclick="cursiaSelect(this)">Llegar a estudiantes de otras ciudades o regiones<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Atender más estudiantes" aria-pressed="false" onclick="cursiaSelect(this)">Atender más estudiantes<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Crear una nueva línea de formación" aria-pressed="false" onclick="cursiaSelect(this)">Crear una nueva línea de formación<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Reducir la complejidad operativa de producir cursos" aria-pressed="false" onclick="cursiaSelect(this)">Reducir la complejidad operativa de producir cursos<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Aún estamos explorando opciones" aria-pressed="false" onclick="cursiaSelect(this)">Aún estamos explorando opciones<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+          </div>
+          <p class="q-error" id="qError-4" role="alert" hidden>Selecciona al menos una opción para continuar.</p>
+        </div>
+
+        <div class="q-step" data-step="5" data-field="programCount">
+          <h3 class="q-title" id="qTitle-5">¿Cuántos programas les gustaría digitalizar?</h3>
+          <p class="q-help">Una estimación aproximada es suficiente.</p>
+          <div class="opt-grid" role="group" aria-labelledby="qTitle-5">
+            <button type="button" class="opt-card" data-value="1 a 3" aria-pressed="false" onclick="cursiaSelect(this)">1 a 3<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="4 a 10" aria-pressed="false" onclick="cursiaSelect(this)">4 a 10<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="11 a 20" aria-pressed="false" onclick="cursiaSelect(this)">11 a 20<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Más de 20" aria-pressed="false" onclick="cursiaSelect(this)">Más de 20<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Aún no lo hemos definido" aria-pressed="false" onclick="cursiaSelect(this)">Aún no lo hemos definido<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+          </div>
+          <p class="q-error" id="qError-5" role="alert" hidden>Selecciona una opción para continuar.</p>
+        </div>
+
+        <div class="q-step" data-step="6" data-field="studentCount">
+          <h3 class="q-title" id="qTitle-6">¿Cuántos estudiantes esperan atender con esta modalidad?</h3>
+          <p class="q-help">Esto nos ayuda a dimensionar el proyecto; no es un compromiso.</p>
+          <div class="opt-grid" role="group" aria-labelledby="qTitle-6">
+            <button type="button" class="opt-card" data-value="Menos de 100" aria-pressed="false" onclick="cursiaSelect(this)">Menos de 100<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Entre 100 y 500" aria-pressed="false" onclick="cursiaSelect(this)">Entre 100 y 500<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Entre 501 y 1.000" aria-pressed="false" onclick="cursiaSelect(this)">Entre 501 y 1.000<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Más de 1.000" aria-pressed="false" onclick="cursiaSelect(this)">Más de 1.000<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Aún no lo hemos definido" aria-pressed="false" onclick="cursiaSelect(this)">Aún no lo hemos definido<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+          </div>
+          <p class="q-error" id="qError-6" role="alert" hidden>Selecciona una opción para continuar.</p>
+        </div>
+
+        <div class="q-step" data-step="7" data-field="virtualCampus">
+          <h3 class="q-title" id="qTitle-7">¿Actualmente cuentan con Moodle o un campus virtual?</h3>
+          <p class="q-help">Selecciona la opción que mejor describa su situación.</p>
+          <div class="opt-grid" role="group" aria-labelledby="qTitle-7">
+            <button type="button" class="opt-card" data-value="Sí, pero necesitamos mejorarlo" aria-pressed="false" onclick="cursiaSelect(this)">Sí, pero necesitamos mejorarlo<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Sí, funciona adecuadamente" aria-pressed="false" onclick="cursiaSelect(this)">Sí, funciona adecuadamente<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="No, necesitamos implementarlo" aria-pressed="false" onclick="cursiaSelect(this)">No, necesitamos implementarlo<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="No estoy seguro" aria-pressed="false" onclick="cursiaSelect(this)">No estoy seguro<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+          </div>
+          <p class="q-error" id="qError-7" role="alert" hidden>Selecciona una opción para continuar.</p>
+        </div>
+
+        <div class="q-step" data-step="8" data-field="startTiming">
+          <h3 class="q-title" id="qTitle-8">¿Cuándo les gustaría iniciar el proyecto?</h3>
+          <p class="q-help">Selecciona la opción que mejor describa sus planes.</p>
+          <div class="opt-grid" role="group" aria-labelledby="qTitle-8">
+            <button type="button" class="opt-card" data-value="Lo antes posible" aria-pressed="false" onclick="cursiaSelect(this)">Lo antes posible<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="En los próximos 30 días" aria-pressed="false" onclick="cursiaSelect(this)">En los próximos 30 días<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="En los próximos 3 meses" aria-pressed="false" onclick="cursiaSelect(this)">En los próximos 3 meses<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="En los próximos 6 meses" aria-pressed="false" onclick="cursiaSelect(this)">En los próximos 6 meses<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Estamos evaluando para más adelante" aria-pressed="false" onclick="cursiaSelect(this)">Estamos evaluando para más adelante<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+          </div>
+          <p class="q-error" id="qError-8" role="alert" hidden>Selecciona una opción para continuar.</p>
+        </div>
+
+        <div class="q-step" data-step="9" data-field="investment">
+          <h3 class="q-title" id="qTitle-9">¿La institución está evaluando una inversión para este proyecto?</h3>
+          <p class="q-help">Selecciona la opción que mejor describa su situación.</p>
+          <div class="opt-grid" role="group" aria-labelledby="qTitle-9">
+            <button type="button" class="opt-card" data-value="Sí, contamos con un presupuesto definido" aria-pressed="false" onclick="cursiaSelect(this)">Sí, contamos con un presupuesto definido<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Estamos evaluando presupuestos y proveedores" aria-pressed="false" onclick="cursiaSelect(this)">Estamos evaluando presupuestos y proveedores<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Necesitamos presentar una propuesta internamente" aria-pressed="false" onclick="cursiaSelect(this)">Necesitamos presentar una propuesta internamente<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Todavía no hemos contemplado un presupuesto" aria-pressed="false" onclick="cursiaSelect(this)">Todavía no hemos contemplado un presupuesto<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+            <button type="button" class="opt-card" data-value="Inicialmente buscamos información" aria-pressed="false" onclick="cursiaSelect(this)">Inicialmente buscamos información<span class="opt-check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span></button>
+          </div>
+          <p class="q-error" id="qError-9" role="alert" hidden>Selecciona una opción para continuar.</p>
+        </div>
+
+        <div class="q-step" data-step="10" data-field="openGoal">
+          <h3 class="q-title" id="qTitle-10">Cuéntanos brevemente qué les gustaría lograr</h3>
+          <p class="q-help">Opcional. Máximo 500 caracteres.</p>
+          <textarea class="input" id="qOpenGoal" maxlength="500" rows="5" aria-labelledby="qTitle-10" aria-describedby="qOpenGoalCount" placeholder="Por ejemplo: queremos digitalizar cinco programas técnicos y llegar a estudiantes de otras regiones."></textarea>
+          <p class="q-help" id="qOpenGoalCount" style="text-align:right; margin-top: 8px;">0 / 500</p>
+        </div>
+
+        <div class="diag-actions">
+          <button type="button" class="btn btn-ghost" id="qBack" disabled onclick="cursiaQStep(-1)">Atrás</button>
+          <button type="button" class="btn btn-primary" id="qNext" onclick="cursiaQStep(1)">Continuar<svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+
+      <div class="diag-panel" id="p2">
+        <h3 class="q-title" style="margin-bottom: 8px;">Último paso: cuéntanos cómo podemos contactarte</h3>
+        <p class="q-help">Usaremos esta información para revisar el proyecto y preparar la reunión.</p>
+        <div class="form-grid">
+          <div class="field"><label for="c-name">Nombre completo *</label><input class="input" id="c-name" placeholder="Ej. María Fernanda Ruiz" autocomplete="name" aria-describedby="err-c-name" /><span class="field-error" id="err-c-name" role="alert" hidden></span></div>
+          <div class="field"><label for="c-inst">Institución *</label><input class="input" id="c-inst" placeholder="Nombre de tu institución" autocomplete="organization" aria-describedby="err-c-inst" /><span class="field-error" id="err-c-inst" role="alert" hidden></span></div>
+          <div class="field"><label for="c-role">Cargo *</label><input class="input" id="c-role" placeholder="Ej. Directora académica" autocomplete="organization-title" aria-describedby="err-c-role" /><span class="field-error" id="err-c-role" role="alert" hidden></span></div>
+          <div class="field"><label for="c-country">País *</label><input class="input" id="c-country" placeholder="Ej. Colombia" autocomplete="country-name" aria-describedby="err-c-country" /><span class="field-error" id="err-c-country" role="alert" hidden></span></div>
+          <div class="field"><label for="c-email">Correo electrónico *</label><input class="input" id="c-email" type="email" placeholder="nombre@institucion.edu" autocomplete="email" aria-describedby="err-c-email" /><span class="field-error" id="err-c-email" role="alert" hidden></span></div>
+          <div class="field"><label for="c-whats">Número de WhatsApp *</label><input class="input" id="c-whats" placeholder="+00 000 000 0000" autocomplete="tel" aria-describedby="err-c-whats" /><span class="field-error" id="err-c-whats" role="alert" hidden></span></div>
+          <div class="field full"><label for="c-web">Sitio web o red social de la institución</label><input class="input" id="c-web" placeholder="Opcional" autocomplete="url" aria-describedby="err-c-web" /><span class="field-error" id="err-c-web" role="alert" hidden></span></div>
+        </div>
+        <div class="privacy-row">
+          <input type="checkbox" id="c-priv" aria-describedby="err-c-priv" />
+          <label for="c-priv">Acepto el tratamiento de mis datos personales conforme a la <a href="/privacy">política de tratamiento de datos</a> de Cursia.</label>
+        </div>
+        <span class="field-error" id="err-c-priv" role="alert" hidden></span>
+        <p class="q-help" style="margin-top: 16px;">Usaremos esta información únicamente para revisar tu solicitud y preparar la conversación con nuestro equipo.</p>
+        <p class="field-error" id="err-c-submit" role="alert" hidden></p>
+        <div class="diag-actions">
+          <button type="button" class="btn btn-ghost" onclick="cursiaTab('p1', document.querySelectorAll('.diag-tab')[0])">Atrás</button>
+          <button type="button" class="btn btn-primary" id="qSubmit" onclick="cursiaSubmitLead()">Ver disponibilidad<svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></button>
+        </div>
+      </div>
+
+      <div class="diag-panel" id="p3">
+        <div class="book-head" id="p3-loading">
+          <span class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+          <div>
+            <h2>Estamos guardando tu información…</h2>
+            <p class="muted">Esto solo tomará un momento.</p>
+          </div>
+        </div>
+
+        <div class="book-head" id="p3-error" hidden>
+          <span class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.46 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg></span>
+          <div>
+            <h2>No pudimos guardar la información en este momento</h2>
+            <p class="muted" id="p3-error-message">Por favor, inténtalo nuevamente.</p>
+            <div style="margin-top: 20px;">
+              <button type="button" class="btn btn-primary" onclick="cursiaSubmitLead()">Reintentar</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="p3-qualified" hidden>
+          <div class="book-head">
+            <span class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></svg></span>
+            <div>
+              <h2>Tu institución podría beneficiarse de un modelo digital</h2>
+              <p class="muted">Con base en tus respuestas, identificamos una oportunidad concreta para digitalizar tu oferta académica.</p>
+              <p class="muted">Selecciona un horario para conversar con nuestro equipo y revisar las alternativas de implementación.</p>
+            </div>
+          </div>
+          <div class="cal-container" id="calContainer"></div>
+          <div class="trust-row">
+            <span class="tag-outline">Conversación inicial sin costo</span>
+            <span class="tag-outline">Revisión del contexto de tu institución</span>
+            <span class="tag-outline">Recomendaciones iniciales</span>
+            <span class="tag-outline">Sin compromiso de contratación</span>
+          </div>
+        </div>
+
+        <div id="p3-unqualified" hidden>
+          <div class="book-head">
+            <span class="icon-badge"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>
+            <div>
+              <h2>Gracias por contarnos sobre tu proyecto</h2>
+              <p class="muted">La información ha sido recibida correctamente. Nuestro equipo revisará el contexto de tu institución y podrá compartir recomendaciones para avanzar en el desarrollo de su oferta digital.</p>
+              <p class="muted" style="margin-top: 16px;"><a href="/contacto" style="color: var(--blue); font-weight: 600;">Escríbenos directamente</a> si prefieres contarnos más antes de agendar.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="diag-intro-note">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>Menos de 3 minutos</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="11" x="3" y="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Tus datos están protegidos</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>Sin compromiso de contratación</span>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Cursia — Volver al inicio">
+          <img src="images/logo-cursia-primary.png" alt="Cursia" width="640" height="213" />
+        </a>
+        <p>Cursia es una compañía colombiana especializada en transformar programas educativos en cursos digitales completos para instituciones educativas: estructura pedagógica, video, actividades interactivas, evaluaciones y un archivo listo para instalar en Moodle.</p>
+        <a class="footer-contact" href="mailto:nicolas@nomaddi.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
+          nicolas@nomaddi.com
+        </a>
+      </div>
+
+      <nav class="footer-col" aria-label="Navegación de producto">
+        <h5>Producto</h5>
+        <ul>
+          <li><a href="/#services">Servicios</a></li>
+          <li><a href="/#how">Cómo funciona</a></li>
+          <li><a href="/#showcase">Producto real</a></li>
+          <li><a href="/#case-study">Caso real</a></li>
+          <li><a href="/#faq">Preguntas frecuentes</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Navegación para empezar">
+        <h5>Empezar</h5>
+        <ul>
+          <li><a href="#diagnostico">Solicitar diagnóstico</a></li>
+          <li><a href="/#pricing">Planes</a></li>
+          <li><a href="/nosotros">Nosotros</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Navegación legal">
+        <h5>Legal</h5>
+        <ul>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/privacy">Privacidad</a></li>
+          <li><a href="/terms">Términos</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Cursia. Todos los derechos reservados.</span>
+      <span>Cursia es desarrollada por <a href="https://nomaddi.com" style="color: var(--text-2);">Nomaddi</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/diagnostic.js"></script>
+<script src="js/schedule.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

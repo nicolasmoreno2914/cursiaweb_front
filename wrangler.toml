@@ -1,0 +1,14 @@
+name = "cursiaweb-front"
+compatibility_date = "2026-01-01"
+pages_build_output_dir = "public"
+
+# Environment variables and secrets are NOT set here — configure them in the
+# Cloudflare dashboard (Pages project → Settings → Environment variables) or
+# via `wrangler pages secret put <NAME>`. Required:
+#   GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY,
+#   ALLOWED_ORIGIN
+# Optional: TURNSTILE_SECRET_KEY, ENVIRONMENT
+#
+# GOOGLE_SERVICE_ACCOUNT_EMAIL / _PRIVATE_KEY reuse the same values already
+# configured on the cursia-landing Pages project — same spreadsheet, same
+# service account, just a different sheet tab (see functions/api/leads.js).
