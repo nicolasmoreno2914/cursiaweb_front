@@ -39,7 +39,7 @@
   --grad-soft: linear-gradient(135deg, rgba(48,34,245,0.08) 0%, rgba(41,180,253,0.08) 100%);
 
   /* Typography */
-  --font-display: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-display: 'Bricolage Grotesque', 'IBM Plex Sans', system-ui, sans-serif;
   --font-sans: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
   --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
 
@@ -178,18 +178,25 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   font-weight: 600;
   font-size: 15px;
   letter-spacing: -0.01em;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1), box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease, filter 0.2s ease;
   white-space: nowrap;
   cursor: pointer;
   text-decoration: none;
 }
+.btn:active { transform: scale(0.97); }
 .btn-primary {
-  background: var(--blue);
+  /* Violet, not blue: white-on-blue measures 4.2:1, under the 4.5:1 AA
+     floor. Violet is the same measured logo color and clears 7.8:1. */
+  background: var(--violet);
   color: #FFFFFF;
 }
 .btn-primary:hover {
   transform: translateY(-1px);
-  background: var(--violet);
+  filter: brightness(0.92);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+  filter: brightness(0.88);
 }
 .btn-ghost {
   background: var(--card-1);
@@ -509,16 +516,13 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   white-space: nowrap;
 }
 .status-pill .pulse {
+  /* Static dot, not an animated one: this sits inside a fixed marketing
+     screenshot that never actually changes state, so a pulsing "live"
+     indicator would be decorating a lie. Reserve pulse for real liveness. */
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background: var(--green);
-  box-shadow: 0 0 8px var(--green);
-  animation: pulse 1.6s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
 }
 
 /* Module rows */
@@ -651,7 +655,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
 .float-1 .ic { background: rgba(56,189,248,0.2); color: var(--cyan); }
 .float-2 { bottom: 60px; left: -42px; animation-delay: 1.2s; }
 .float-2 .ic { background: rgba(139,92,246,0.22); color: var(--violet); }
-.float-3 { top: 70px; right: -28px; animation-delay: 0.6s; }
+.float-3 { top: 160px; right: -28px; animation-delay: 0.6s; }
 .float-3 .ic { background: rgba(34,197,94,0.18); color: var(--green); }
 .float-4 { bottom: -18px; right: -10px; animation-delay: 1.8s; }
 .float-4 .ic { background: rgba(20,184,166,0.2); color: var(--teal); }
@@ -2065,7 +2069,6 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   .reveal { opacity: 1; transform: none; transition: none; }
   .float-card { animation: none !important; }
   .progress-fill { animation: none !important; width: 72%; }
-  .status-pill .pulse { animation: none !important; }
   .trust-logo-card { transition: background 0.2s, border-color 0.2s; }
   .trust-logo-card:hover { transform: none; }
 }
