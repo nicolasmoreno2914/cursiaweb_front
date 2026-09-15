@@ -1,7 +1,9 @@
 # Cloudflare Pages — Redirects
+# /consultoria y /piloto → calendario de reservas (mismos enlaces que usan las CTAs del sitio)
+/consultoria    https://calendar.google.com/calendar/appointments/schedules/AcZssZ3wRjWpN4h-ZxfyJuhri7_fBSOQdIlvFidsRpFzUYIIQITKlC-6etptDmRXIxukW95PAICI5rBv?gv=true   302
+/piloto         https://calendar.google.com/calendar/appointments/schedules/AcZssZ3wRjWpN4h-ZxfyJuhri7_fBSOQdIlvFidsRpFzUYIIQITKlC-6etptDmRXIxukW95PAICI5rBv?gv=true   302
+
 # Rutas internas → redirigen a la página principal
-/consultoria    /index.html   302
-/piloto         /index.html   302
 /privacy        /index.html   302
 /terms          /index.html   302
 
