@@ -2419,6 +2419,18 @@ textarea.input { resize: vertical; }
   .stat-bar-value { text-align: left; }
 }
 
+/* Founders section (Nosotros) — editorial photo + text, no boxed
+   card/shadow chrome (deliberate: reference audit of Linear/Resend/Attio
+   showed founder sections read as more premium without a bordered card
+   wrapping the whole block — just photo, name, role and bio on the page). */
+.founders-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+.founder-photo { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius-lg); border: 1px solid var(--border-1); display: block; }
+.founder-name { margin-top: 22px; font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--text-1); letter-spacing: -0.01em; }
+.founder-role { margin-top: 3px; font-size: 14px; color: var(--text-3); }
+.founder-bio { margin-top: 15px; font-size: 14.5px; line-height: 1.65; color: var(--text-2); }
+.founder-signature { margin-top: 15px; font-family: var(--font-display); font-style: italic; font-size: 15px; color: var(--violet); }
+@media (max-width: 700px) { .founders-grid { grid-template-columns: 1fr; gap: 40px; } }
+
 /* Editorial pull-quote inside .legal-content */
 .pull-quote {
   margin: 28px 0;
