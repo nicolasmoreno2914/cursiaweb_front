@@ -2259,6 +2259,13 @@ textarea.input { resize: vertical; }
 .book-head h2 { font-family: var(--font-display); font-weight: 600; font-size: 21px; margin: 0; letter-spacing: -0.01em; }
 .book-head p.muted { font-size: 14.5px; color: var(--text-3); margin: 6px 0 0; max-width: 52ch; }
 
+/* Simple status states (loading / error) — no body content below, so the
+   whole block centers as a unit instead of the row layout used by the
+   qualified/unqualified panels, which need left alignment for their
+   calendar embed and link list. */
+.book-head.book-head-status { flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+.book-head.book-head-status p.muted { margin-left: auto; margin-right: auto; }
+
 .cal-container { border: 1px solid var(--border-1); border-radius: var(--radius-md); background: var(--bg-0); padding: 4px; overflow: hidden; }
 .cal-container iframe { display: block; border-radius: calc(var(--radius-md) - 4px); }
 
