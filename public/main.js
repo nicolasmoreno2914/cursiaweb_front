@@ -85,6 +85,7 @@
     var nodes  = Array.prototype.slice.call(card.querySelectorAll('.evo-node'));
     var panels = Array.prototype.slice.call(card.querySelectorAll('.evo-panel-item'));
     var dots   = Array.prototype.slice.call(card.querySelectorAll('.evo-chart-dot'));
+    var guides = Array.prototype.slice.call(card.querySelectorAll('.evo-chart-guide'));
     var hits   = Array.prototype.slice.call(card.querySelectorAll('.evo-chart-hit'));
     var order  = nodes.map(function (n) { return n.getAttribute('data-node'); });
     var current = order.indexOf('2026');
@@ -104,6 +105,9 @@
       });
       dots.forEach(function (d) {
         d.classList.toggle('active', d.getAttribute('data-node') === key);
+      });
+      guides.forEach(function (g) {
+        g.classList.toggle('active', g.getAttribute('data-node') === key);
       });
     }
 

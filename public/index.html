@@ -202,7 +202,6 @@
 
       <!-- Evolution timeline -->
       <div class="hero-visual reveal">
-        <div class="hero-glow" aria-hidden="true"></div>
         <div class="evo-card" aria-label="Línea de tiempo interactiva: la evolución de la educación digital, de 2010 a 2030 y más allá">
           <div class="evo-head">
             <span class="evo-eyebrow"><span class="dot" aria-hidden="true"></span>Evolución de la educación digital</span>
@@ -213,22 +212,30 @@
               <svg viewBox="0 0 400 180" preserveAspectRatio="none">
                 <defs>
                   <linearGradient id="evoAreaGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#3022F5" stop-opacity="0.35"/>
-                    <stop offset="100%" stop-color="#3022F5" stop-opacity="0"/>
-                  </linearGradient>
-                  <linearGradient id="evoLineGrad" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stop-color="#94A3B8"/>
-                    <stop offset="55%" stop-color="#1876FC"/>
-                    <stop offset="100%" stop-color="#29B4FD"/>
+                    <stop offset="0%" stop-color="#1876FC" stop-opacity="0.16"/>
+                    <stop offset="100%" stop-color="#1876FC" stop-opacity="0"/>
                   </linearGradient>
                 </defs>
+                <!-- Reference gridlines, like an actual chart's y-axis — not
+                     decorative texture -->
+                <line class="evo-chart-grid" x1="14" y1="18" x2="386" y2="18"/>
+                <line class="evo-chart-grid" x1="14" y1="61" x2="386" y2="61"/>
+                <line class="evo-chart-grid" x1="14" y1="104" x2="386" y2="104"/>
+                <line class="evo-chart-grid" x1="14" y1="147" x2="386" y2="147"/>
                 <path class="evo-chart-area" d="M 20,150 C 35.83,145.33 83.33,132.33 115,122 C 146.67,111.67 179.17,100.83 210,88 C 240.83,75.17 271.67,57.33 300,45 C 328.33,32.67 366.67,19.17 380,14 L 380,180 L 20,180 Z"/>
                 <path class="evo-chart-line" d="M 20,150 C 35.83,145.33 83.33,132.33 115,122 C 146.67,111.67 179.17,100.83 210,88 C 240.83,75.17 271.67,57.33 300,45 C 328.33,32.67 366.67,19.17 380,14"/>
-                <circle class="evo-chart-dot" data-node="2010" cx="20" cy="150" r="4.5"/>
-                <circle class="evo-chart-dot" data-node="2015" cx="115" cy="122" r="4.5"/>
-                <circle class="evo-chart-dot" data-node="2020" cx="210" cy="88" r="4.5"/>
-                <circle class="evo-chart-dot evo-chart-dot-now" data-node="2026" cx="300" cy="45" r="4.5"/>
-                <circle class="evo-chart-dot" data-node="2030" cx="380" cy="14" r="4.5"/>
+                <!-- Vertical guide down to the baseline — only the active
+                     point's guide is visible, toggled by JS -->
+                <line class="evo-chart-guide" data-node="2010" x1="20" y1="150" x2="20" y2="178"/>
+                <line class="evo-chart-guide" data-node="2015" x1="115" y1="122" x2="115" y2="178"/>
+                <line class="evo-chart-guide" data-node="2020" x1="210" y1="88" x2="210" y2="178"/>
+                <line class="evo-chart-guide" data-node="2026" x1="300" y1="45" x2="300" y2="178"/>
+                <line class="evo-chart-guide" data-node="2030" x1="380" y1="14" x2="380" y2="178"/>
+                <circle class="evo-chart-dot" data-node="2010" cx="20" cy="150" r="4"/>
+                <circle class="evo-chart-dot" data-node="2015" cx="115" cy="122" r="4"/>
+                <circle class="evo-chart-dot" data-node="2020" cx="210" cy="88" r="4"/>
+                <circle class="evo-chart-dot evo-chart-dot-now" data-node="2026" cx="300" cy="45" r="4"/>
+                <circle class="evo-chart-dot" data-node="2030" cx="380" cy="14" r="4"/>
                 <!-- Larger invisible hit targets — the visible dots above are
                      too small to reliably click/tap; these sit on top. -->
                 <circle class="evo-chart-hit" data-node="2010" cx="20" cy="150" r="16"/>
