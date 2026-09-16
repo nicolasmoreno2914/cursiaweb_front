@@ -2380,6 +2380,13 @@ textarea.input { resize: vertical; }
 .case-facts .fact-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-4); }
 .case-facts .fact-value { font-size: 15px; font-weight: 600; color: var(--text-1); }
 
+/* Recursos hub — secondary articles grid (2 columns, collapses on mobile
+   via the same breakpoint .problem-grid already uses; kept as a real
+   class instead of an inline grid-template-columns override, which
+   would out-specificity the responsive media queries) */
+.recursos-secondary-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 600px) { .recursos-secondary-grid { grid-template-columns: 1fr; } }
+
 /* Editorial pull-quote inside .legal-content */
 .pull-quote {
   margin: 28px 0;
