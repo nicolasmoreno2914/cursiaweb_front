@@ -2427,6 +2427,9 @@ textarea.input { resize: vertical; }
 .founder-photo { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; border-radius: var(--radius-lg); border: 1px solid var(--border-1); display: block; }
 .founder-name { margin-top: 22px; font-family: var(--font-display); font-size: 21px; font-weight: 600; color: var(--text-1); letter-spacing: -0.01em; }
 .founder-role { margin-top: 3px; font-size: 14px; color: var(--text-3); }
+.founder-linkedin { margin-top: 10px; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: var(--text-3); text-decoration: none; transition: color 0.15s ease; }
+.founder-linkedin svg { width: 15px; height: 15px; }
+.founder-linkedin:hover { color: var(--blue); }
 .founder-bio { margin-top: 15px; font-size: 14.5px; line-height: 1.65; color: var(--text-2); }
 .founder-signature { margin-top: 15px; font-family: var(--font-display); font-style: italic; font-size: 15px; color: var(--violet); }
 @media (max-width: 700px) { .founders-grid { grid-template-columns: 1fr; gap: 40px; } }
