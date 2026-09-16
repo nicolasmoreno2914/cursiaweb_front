@@ -75,6 +75,39 @@
   });
 
   // ----------------------------------------------------------
+  // Hero evolution timeline — click or hover a node to preview it
+  // ----------------------------------------------------------
+  (function () {
+    var card = document.querySelector('.evo-card');
+    if (!card) return;
+
+    var nodes  = Array.prototype.slice.call(card.querySelectorAll('.evo-node'));
+    var panels = Array.prototype.slice.call(card.querySelectorAll('.evo-panel-item'));
+
+    function setActive(key) {
+      nodes.forEach(function (n) {
+        var isActive = n.getAttribute('data-node') === key;
+        n.classList.toggle('active', isActive);
+        var btn = n.querySelector('.evo-node-btn');
+        if (btn) btn.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+      });
+      panels.forEach(function (p) {
+        p.classList.toggle('active', p.getAttribute('data-node') === key);
+      });
+    }
+
+    nodes.forEach(function (n) {
+      var btn = n.querySelector('.evo-node-btn');
+      var key = n.getAttribute('data-node');
+      if (!btn) return;
+      btn.addEventListener('click', function () { setActive(key); });
+      btn.addEventListener('mouseenter', function () { setActive(key); });
+    });
+
+    setActive('2026');
+  })();
+
+  // ----------------------------------------------------------
   // Course showcase carousel
   // ----------------------------------------------------------
   (function () {
