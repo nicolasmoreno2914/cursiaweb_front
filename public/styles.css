@@ -325,6 +325,11 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   margin-top: 14px;
 }
 .mobile-menu .mobile-cta .btn {
+  /* .mobile-menu a { color: var(--text-2) } above outranks .btn-primary's
+     own white text (one class+type selector beats one class selector) —
+     without this the CTA button renders in muted gray-blue instead of
+     white, on top of its violet background. */
+  color: #FFFFFF;
   padding: 13px 22px;
   border-bottom: none;
 }
