@@ -41,6 +41,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://somoscursia.nomaddi.com/recursos/scorm-vs-h5p-cursos-moodle</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://somoscursia.nomaddi.com/recursos/crecimiento-educacion-virtual-colombia</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

@@ -1,0 +1,404 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "yj9oc4kubj");
+  </script>
+
+  <title>SCORM vs. H5P: cuál elegir para tus cursos Moodle — Cursia</title>
+  <meta name="description" content="SCORM y H5P resuelven problemas distintos dentro de Moodle. Las diferencias reales entre los dos formatos, y cuándo conviene usar cada uno." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="SCORM vs. H5P: cuál elegir para tus cursos Moodle" />
+  <meta property="og:site_name" content="Cursia" />
+  <meta property="og:description" content="SCORM y H5P resuelven problemas distintos dentro de Moodle. Las diferencias reales entre los dos formatos, y cuándo conviene usar cada uno." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://somoscursia.nomaddi.com/recursos/scorm-vs-h5p-cursos-moodle" />
+  <meta property="og:image" content="https://somoscursia.nomaddi.com/images/logo-cursia-primary.png" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SCORM vs. H5P: cuál elegir para tus cursos Moodle" />
+  <meta name="twitter:description" content="SCORM y H5P resuelven problemas distintos dentro de Moodle. Las diferencias reales entre los dos formatos, y cuándo conviene usar cada uno." />
+  <meta name="twitter:image" content="https://somoscursia.nomaddi.com/images/logo-cursia-primary.png" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://somoscursia.nomaddi.com/recursos/scorm-vs-h5p-cursos-moodle" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "SCORM vs. H5P: cuál elegir para tus cursos Moodle",
+    "description": "SCORM y H5P resuelven problemas distintos dentro de Moodle. Las diferencias reales entre los dos formatos, y cuándo conviene usar cada uno.",
+    "image": "https://somoscursia.nomaddi.com/images/logo-cursia-primary.png",
+    "datePublished": "2026-09-16",
+    "dateModified": "2026-09-16",
+    "author": { "@type": "Organization", "name": "Cursia", "url": "https://somoscursia.nomaddi.com" },
+    "publisher": { "@type": "Organization", "name": "Cursia", "url": "https://somoscursia.nomaddi.com" },
+    "mainEntityOfPage": "https://somoscursia.nomaddi.com/recursos/scorm-vs-h5p-cursos-moodle"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Puedo usar SCORM y H5P en el mismo curso de Moodle?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sí. No es una decisión de todo o nada — la mayoría de los cursos bien construidos usan H5P para las actividades interactivas del día a día y reservan SCORM para lo que necesita empaquetarse, exportarse o reportar cumplimiento de forma estandarizada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿H5P reemplaza a SCORM por completo?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. H5P es mejor para contenido interactivo que se edita y reutiliza dentro de Moodle, pero SCORM sigue siendo el formato que más sistemas externos reconocen si el curso necesita salir de Moodle o entregarse a otra plataforma."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué formato usa Cursia para producir los cursos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende del objetivo de cada actividad. Cursia produce actividades interactivas en H5P para la mayoría de los módulos, y usa SCORM cuando la institución necesita reportes de cumplimiento específicos o portabilidad fuera de Moodle."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://somoscursia.nomaddi.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Recursos", "item": "https://somoscursia.nomaddi.com/recursos" },
+      { "@type": "ListItem", "position": 3, "name": "SCORM vs. H5P", "item": "https://somoscursia.nomaddi.com/recursos/scorm-vs-h5p-cursos-moodle" }
+    ]
+  }
+  </script>
+</head>
+<body>
+<div class="page-bg" aria-hidden="true"></div>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <nav class="nav" aria-label="Navegación principal">
+      <a class="brand" href="/" aria-label="Cursia — Inicio">
+        <img src="/images/logo-cursia-primary.png" alt="Cursia" width="640" height="213" />
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="/">Inicio</a></li>
+        <li><a href="/#how">Cómo funciona</a></li>
+        <li><a href="/#pricing">Planes</a></li>
+        <li><a href="/#case-study">Caso real</a></li>
+        <li><a href="/recursos">Recursos</a></li>
+        <li><a href="/nosotros">Nosotros</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a class="btn btn-primary btn-sm" href="/diagnostico">
+          Solicitar diagnóstico
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobile-menu" role="navigation" aria-label="Menú móvil">
+      <div class="mobile-menu-inner">
+        <a href="/">Inicio</a>
+        <a href="/#how">Cómo funciona</a>
+        <a href="/#pricing">Planes</a>
+        <a href="/#case-study">Caso real</a>
+        <a href="/recursos">Recursos</a>
+        <a href="/nosotros">Nosotros</a>
+        <div class="mobile-cta">
+          <a class="btn btn-primary" href="/diagnostico">Solicitar diagnóstico</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================================================
+     BREADCRUMB
+     ============================================================ -->
+<nav aria-label="Ruta de navegación" style="padding: 18px 0 0;">
+  <div class="container">
+    <div style="display:flex; align-items:center; gap:6px; font-size:13px; color: var(--text-4);">
+      <a href="/" style="color: var(--text-4);">Inicio</a>
+      <span aria-hidden="true">/</span>
+      <a href="/recursos" style="color: var(--text-4);">Recursos</a>
+      <span aria-hidden="true">/</span>
+      <span style="color: var(--text-3);">SCORM vs. H5P</span>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     INTRO
+     ============================================================ -->
+<article>
+<section aria-labelledby="article-heading">
+  <div class="container">
+    <div class="section-head reveal" style="max-width: 680px; margin-left: auto; margin-right: auto;">
+      <span class="section-eyebrow"><span class="dot" aria-hidden="true"></span>Guía</span>
+      <h1 id="article-heading" class="section-title">SCORM vs. H5P: cuál elegir para tus cursos Moodle</h1>
+      <p class="section-subtitle" style="max-width: 620px;">
+        No es una pregunta de cuál es "mejor" — son dos formatos que resuelven problemas distintos, y la mayoría de los cursos bien construidos terminan usando ambos. Esto es lo que cada uno hace realmente, y cuándo conviene cada uno.
+      </p>
+      <p style="color: var(--text-4); font-size: 13px; margin-top: 18px;">Publicado el 16 de septiembre de 2026 · Cursia</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     DESARROLLO
+     ============================================================ -->
+<section class="tight" style="padding-top: 0;" aria-labelledby="que-es-heading">
+  <div class="container">
+    <div class="legal-content reveal" style="margin: 0 auto;">
+      <h2 id="que-es-heading">Qué es cada uno, en términos simples.</h2>
+      <p><strong>SCORM</strong> es un formato de empaquetado: convierte un curso en un archivo cerrado y portable que cualquier LMS compatible con el estándar puede importar y trackear — completado, tiempo dedicado, puntaje. Es el estándar más antiguo y más ampliamente reconocido de la industria, congelado desde su última actualización en 2009, y sigue siendo compatible con prácticamente cualquier plataforma, incluido Moodle.</p>
+      <p><strong>H5P</strong> es una tecnología de contenido interactivo construida sobre HTML5, integrada directamente en el "banco de contenido" de Moodle desde la versión 4. En vez de exportar un archivo cerrado, H5P vive dentro de Moodle: puedes editar una actividad una sola vez y el cambio se refleja automáticamente en todos los cursos donde esté insertada, sin volver a empaquetar ni reinstalar nada.</p>
+
+      <h2 style="margin-top: 48px;">Las diferencias que realmente importan al elegir.</h2>
+      <ul>
+        <li><strong>Reutilización y edición posterior.</strong> H5P gana claramente: una actividad se actualiza una vez y el cambio se propaga a todos los cursos que la usan. Un paquete SCORM, en cambio, hay que volver a generarlo y resubirlo completo cada vez que cambia algo.</li>
+        <li><strong>Portabilidad fuera de Moodle.</strong> SCORM gana aquí: si en el futuro necesitas exportar un curso a otro LMS, o entregárselo a una institución que usa una plataforma distinta, SCORM es el formato que más sistemas reconocen sin conversión.</li>
+        <li><strong>Reportes de cumplimiento detallados.</strong> SCORM tiene décadas de estandarización en esto — útil para certificaciones reguladas donde necesitas demostrar exactamente qué completó cada estudiante y cuándo.</li>
+        <li><strong>Variedad de actividades interactivas.</strong> H5P incluye de forma nativa videos interactivos, líneas de tiempo, escenarios de ramificación, flashcards y presentaciones — sin depender de una herramienta de autor externa para producirlas.</li>
+      </ul>
+
+      <blockquote class="pull-quote">"No es una decisión de todo o nada — la pregunta real es qué necesita cada actividad, no qué formato es más nuevo."</blockquote>
+
+      <h2 style="margin-top: 48px;">Cuándo tiene sentido usar cada uno.</h2>
+      <p><strong>Usa H5P</strong> cuando el contenido vive y se actualiza dentro de Moodle: la mayoría de las actividades interactivas de un curso — quizzes, videos con preguntas incrustadas, escenarios de decisión — se benefician de poder editarse sin volver a empaquetar nada. Es también la opción más simple de mantener para un equipo que no tiene un desarrollador dedicado a producción SCORM.</p>
+      <p><strong>Usa SCORM</strong> cuando el curso necesita moverse fuera de Moodle en algún momento, cuando ya tienes contenido producido en ese formato por otro proveedor, o cuando el reporte de cumplimiento exige el nivel de detalle que SCORM estandariza desde hace más de dos décadas. Vale la pena leer también <a href="/recursos/moodle-repositorio-vs-experiencia-aprendizaje" style="color: var(--blue); font-weight: 600;">qué separa un Moodle usado como repositorio de uno con una experiencia de aprendizaje real</a> — el formato del contenido es una pieza de esa diferencia, no toda.</p>
+
+      <h2 style="margin-top: 48px;">Cómo lo resolvemos con cada institución.</h2>
+      <p>No partimos de "usamos H5P" o "usamos SCORM" como política fija — depende de qué necesita cada módulo. La mayoría de las actividades interactivas de un curso Cursia se producen en H5P, precisamente porque la mayoría de las instituciones necesitan editar y reutilizar contenido dentro de su propio Moodle, no exportarlo. Cuando un programa sí necesita reportes de cumplimiento específicos o portabilidad, usamos SCORM para esas piezas puntuales. Si no tienes claro cuál necesita tu programa, es exactamente el tipo de pregunta que resolvemos en el <a href="/diagnostico" style="color: var(--blue); font-weight: 600;">diagnóstico gratuito</a>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FUENTES
+     ============================================================ -->
+<section class="tight" style="padding-top: 0;" aria-labelledby="fuentes-heading">
+  <div class="container">
+    <div class="legal-content reveal" style="margin: 0 auto;">
+      <h2 id="fuentes-heading" style="font-size: 16px; color: var(--text-3);">Fuentes</h2>
+      <p style="font-size: 14px;">
+        <a href="https://h5p.org/moodle" target="_blank" rel="noopener noreferrer" style="color: var(--text-4);">H5P.org — Set up H5P for Moodle</a><br />
+        <a href="https://scorm.com/" target="_blank" rel="noopener noreferrer" style="color: var(--text-4);">SCORM.com (Rustici Software) — What is SCORM and how it works</a>
+      </p>
+    </div>
+  </div>
+</section>
+</article>
+
+<!-- ============================================================
+     FAQ
+     ============================================================ -->
+<section class="tight" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="section-head center reveal">
+      <h2 id="faq-heading" class="section-title" style="font-size: clamp(24px, 2.8vw, 34px);">Preguntas frecuentes</h2>
+    </div>
+    <ul class="faq-grid reveal">
+      <li class="faq-item open">
+        <button class="faq-q" aria-expanded="true" aria-controls="faq-a-1">
+          <span>¿Puedo usar SCORM y H5P en el mismo curso de Moodle?</span>
+          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-a" id="faq-a-1" role="region">
+          <div class="faq-a-inner">Sí. No es una decisión de todo o nada — la mayoría de los cursos bien construidos usan H5P para las actividades interactivas del día a día y reservan SCORM para lo que necesita empaquetarse, exportarse o reportar cumplimiento de forma estandarizada.</div>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-2">
+          <span>¿H5P reemplaza a SCORM por completo?</span>
+          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-a" id="faq-a-2" role="region">
+          <div class="faq-a-inner">No. H5P es mejor para contenido interactivo que se edita y reutiliza dentro de Moodle, pero SCORM sigue siendo el formato que más sistemas externos reconocen si el curso necesita salir de Moodle o entregarse a otra plataforma.</div>
+        </div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a-3">
+          <span>¿Qué formato usa Cursia para producir los cursos?</span>
+          <span class="chev" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        </button>
+        <div class="faq-a" id="faq-a-3" role="region">
+          <div class="faq-a-inner">Depende del objetivo de cada actividad. Cursia produce actividades interactivas en H5P para la mayoría de los módulos, y usa SCORM cuando la institución necesita reportes de cumplimiento específicos o portabilidad fuera de Moodle.</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============================================================
+     FINAL CTA
+     ============================================================ -->
+<section class="tight" aria-labelledby="cta-heading">
+  <div class="container">
+    <div class="final-cta reveal">
+      <h2 id="cta-heading">¿No sabes cuál necesita tu programa?</h2>
+      <p>Agenda un diagnóstico gratuito de 30 minutos. Revisamos tu Moodle y tus objetivos, y te decimos qué formato tiene sentido para cada módulo.</p>
+      <div class="btn-row">
+        <a class="btn btn-primary btn-lg" href="/diagnostico">
+          Solicitar diagnóstico
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a class="btn btn-ghost btn-lg" href="/recursos">Ver más recursos</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ARTÍCULOS RELACIONADOS
+     ============================================================ -->
+<section class="tight" aria-labelledby="related-heading">
+  <div class="container">
+    <div class="section-head reveal" style="max-width: 680px; margin-left: auto; margin-right: auto;">
+      <h2 id="related-heading" class="section-title" style="font-size: clamp(22px, 2.6vw, 30px);">Sigue leyendo</h2>
+    </div>
+    <div class="problem-grid recursos-secondary-grid reveal" style="max-width: 900px; margin: 24px auto 0;">
+      <article class="problem-card">
+        <h3 style="font-size: 17px; margin-bottom: 10px;"><a href="/recursos/moodle-repositorio-vs-experiencia-aprendizaje" style="color: inherit;">Moodle como repositorio vs. experiencia de aprendizaje</a></h3>
+        <p style="margin-bottom: 16px;">Las señales concretas para distinguir un repositorio de PDFs de un curso digital real.</p>
+        <a class="btn btn-ghost btn-sm" href="/recursos/moodle-repositorio-vs-experiencia-aprendizaje" style="align-self: flex-start;">
+          Leer el artículo
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="problem-card">
+        <h3 style="font-size: 17px; margin-bottom: 10px;"><a href="/recursos/que-preguntar-antes-de-contratar-un-proveedor" style="color: inherit;">Qué preguntar antes de contratar un proveedor</a></h3>
+        <p style="margin-bottom: 16px;">8 preguntas concretas para evaluar cualquier proveedor de digitalización de cursos, antes de firmar nada.</p>
+        <a class="btn btn-ghost btn-sm" href="/recursos/que-preguntar-antes-de-contratar-un-proveedor" style="align-self: flex-start;">
+          Leer el artículo
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+
+      <article class="problem-card">
+        <h3 style="font-size: 17px; margin-bottom: 10px;"><a href="/recursos/cuanto-cuesta-digitalizar-un-programa-academico" style="color: inherit;">Cuánto cuesta digitalizar un programa académico</a></h3>
+        <p style="margin-bottom: 16px;">Precios reales: desde $4.200.000 COP. Qué determina el costo final y los 3 planes disponibles.</p>
+        <a class="btn btn-ghost btn-sm" href="/recursos/cuanto-cuesta-digitalizar-un-programa-academico" style="align-self: flex-start;">
+          Leer el artículo
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="brand" href="/" aria-label="Cursia — Volver al inicio">
+          <img src="/images/logo-cursia-primary.png" alt="Cursia" width="640" height="213" />
+        </a>
+        <p>Cursia es una compañía colombiana especializada en transformar programas educativos en cursos digitales completos para instituciones educativas: estructura pedagógica, video, actividades interactivas, evaluaciones y un archivo listo para instalar en Moodle.</p>
+        <a class="footer-contact" href="mailto:nicolas@nomaddi.com">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 7 9-7"/></svg>
+          nicolas@nomaddi.com
+        </a>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/cursia.ai" target="_blank" rel="noopener noreferrer" aria-label="Cursia en Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.facebook.com/share/19bY3Wan8c/" target="_blank" rel="noopener noreferrer" aria-label="Cursia en Facebook">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+          <a href="https://www.tiktok.com/@cursia.ai" target="_blank" rel="noopener noreferrer" aria-label="Cursia en TikTok">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/cursia-ai/" target="_blank" rel="noopener noreferrer" aria-label="Cursia en LinkedIn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-col" aria-label="Navegación de producto">
+        <h3>Producto</h3>
+        <ul>
+          <li><a href="/#services">Servicios</a></li>
+          <li><a href="/#how">Cómo funciona</a></li>
+          <li><a href="/#showcase">Producto real</a></li>
+          <li><a href="/#case-study">Caso real</a></li>
+          <li><a href="/#faq">Preguntas frecuentes</a></li>
+          <li><a href="/recursos">Recursos</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Navegación para empezar">
+        <h3>Empezar</h3>
+        <ul>
+          <li><a href="/diagnostico">Solicitar diagnóstico</a></li>
+          <li><a href="/#pricing">Planes</a></li>
+          <li><a href="/nosotros">Nosotros</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Navegación legal">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="/contacto">Contacto</a></li>
+          <li><a href="/privacy">Privacidad</a></li>
+          <li><a href="/terms">Términos</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Cursia. Todos los derechos reservados.</span>
+      <span>Cursia es desarrollada por <a href="https://nomaddi.com" style="color: var(--text-2);">Nomaddi</a>.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/main.js"></script>
+</body>
+</html>
