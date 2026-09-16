@@ -117,30 +117,51 @@
       var btn = n.querySelector('.evo-node-btn');
       var key = n.getAttribute('data-node');
       if (!btn) return;
-      btn.addEventListener('click', function () { setActive(key); resetAuto(); });
+      btn.addEventListener('click', function () { setActive(key); pauseThenResume(); });
       btn.addEventListener('mouseenter', function () { setActive(key); });
     });
     hits.forEach(function (hit) {
       var key = hit.getAttribute('data-node');
-      hit.addEventListener('click', function () { setActive(key); resetAuto(); });
+      hit.addEventListener('click', function () { setActive(key); pauseThenResume(); });
       hit.addEventListener('mouseenter', function () { setActive(key); });
     });
 
-    // Autoplay (6s, skip if reduced-motion)
-    function startAuto() {
+    // Autoplay: 9s per step normally, skip entirely if reduced-motion.
+    // After the visitor picks a point themselves, hold it for 16s before
+    // the loop takes back over — tracked as a deadline (resumeAt), not a
+    // fixed timer, so leaving/re-entering the card while that grace period
+    // is running doesn't reset or skip it.
+    var AUTO_DELAY   = 9000;
+    var MANUAL_PAUSE = 16000;
+    var resumeAt = 0;
+
+    function startAuto(delay) {
       if (isReducedMotion) return;
-      autoTimer = setInterval(goToNext, 6000);
+      autoTimer = setInterval(goToNext, delay || AUTO_DELAY);
     }
-    function resetAuto() {
+    function pauseThenResume() {
+      resumeAt = Date.now() + MANUAL_PAUSE;
       clearInterval(autoTimer);
-      startAuto();
+      autoTimer = setTimeout(function () { resumeAt = 0; startAuto(AUTO_DELAY); }, MANUAL_PAUSE);
+    }
+    // Resume after a hover/focus pause, honoring any pending manual-pick
+    // grace period instead of always jumping straight back to AUTO_DELAY.
+    function resumeFromPause() {
+      clearInterval(autoTimer);
+      var remaining = resumeAt - Date.now();
+      if (remaining > 0) {
+        autoTimer = setTimeout(function () { resumeAt = 0; startAuto(AUTO_DELAY); }, remaining);
+      } else {
+        resumeAt = 0;
+        startAuto(AUTO_DELAY);
+      }
     }
 
-    // Pause on hover / focus, like the showcase carousel
+    // Pause on hover / focus, like the showcase carousel.
     card.addEventListener('mouseenter', function () { clearInterval(autoTimer); });
-    card.addEventListener('mouseleave', function () { startAuto(); });
+    card.addEventListener('mouseleave', resumeFromPause);
     card.addEventListener('focusin',    function () { clearInterval(autoTimer); });
-    card.addEventListener('focusout',   function () { startAuto(); });
+    card.addEventListener('focusout',   resumeFromPause);
 
     setActive('2026');
     startAuto();
