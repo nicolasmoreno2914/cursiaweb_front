@@ -21,7 +21,7 @@
   --text-1: #0B1330;
   --text-2: #46516E;
   --text-3: #666F88;
-  --text-4: #8B93A8;
+  --text-4: #6C748D; /* was #8B93A8 — 3.07:1 on white, fails WCAG AA for text; this hits 4.65:1 */
 
   /* Accents — measured from the real Cursia logo files */
   --blue: #1876FC;
@@ -707,6 +707,9 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
    Solution / Pipeline
    ============================================================ */
 .solution-wrap {
+  /* Slightly darker than white, so --text-4 (tuned for a 4.5:1 minimum on
+     white) needs a touch more depth here to keep the same contrast floor. */
+  --text-4: var(--text-3);
   padding: 40px;
   border-radius: var(--radius-lg);
   background: var(--bg-2);
