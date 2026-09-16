@@ -2322,6 +2322,36 @@ textarea.input { resize: vertical; }
 .legal-content strong { color: var(--text-1); font-weight: 600; }
 .legal-content a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
 
+/* Featured article card (recursos hub) — text-left, big-stat-right split,
+   borrowed from Stripe's blog hero pattern */
+.featured-article {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--card-elevated);
+}
+.featured-article-text { padding: clamp(28px, 4vw, 44px); display: flex; flex-direction: column; gap: 14px; }
+.featured-article-text h3 { font-family: var(--font-display); font-weight: 600; letter-spacing: -0.01em; font-size: clamp(22px, 2.4vw, 28px); line-height: 1.2; }
+.featured-article-text p { color: var(--text-2); font-size: 15.5px; line-height: 1.6; }
+.featured-article-stat {
+  background: var(--bg-2);
+  border-left: 1px solid var(--border-1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 32px;
+}
+.featured-article-stat .num { font-family: var(--font-display); font-size: clamp(44px, 5vw, 68px); font-weight: 700; color: var(--violet); line-height: 1; }
+.featured-article-stat .label { margin-top: 10px; color: var(--text-3); font-size: 13.5px; max-width: 190px; line-height: 1.5; }
+@media (max-width: 700px) {
+  .featured-article { grid-template-columns: 1fr; }
+  .featured-article-stat { border-left: none; border-top: 1px solid var(--border-1); }
+}
+
 /* Article reach figure (case-study illustration) */
 .reach-figure {
   border: 1px solid var(--border-1);
@@ -2334,6 +2364,21 @@ textarea.input { resize: vertical; }
   .reach-figure { padding: 20px 12px; }
   .reach-figure svg text { display: none; }
 }
+
+/* Case-facts strip (article byline area) — borrowed from Linear's
+   "company facts" pattern: quick-scan metadata before the reader
+   commits to the full article */
+.case-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px 40px;
+  padding: 22px 0;
+  border-top: 1px solid var(--border-1);
+  border-bottom: 1px solid var(--border-1);
+}
+.case-facts .fact { display: flex; flex-direction: column; gap: 4px; }
+.case-facts .fact-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-4); }
+.case-facts .fact-value { font-size: 15px; font-weight: 600; color: var(--text-1); }
 
 /* Editorial pull-quote inside .legal-content */
 .pull-quote {
