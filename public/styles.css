@@ -1664,14 +1664,23 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
 
 .trust-logo-card {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 6px;
   padding: 20px 36px;
   background: var(--card-1);
   border: 1px solid var(--border-1);
   border-radius: var(--radius-md);
   text-decoration: none;
   transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.trust-logo-stat {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-3);
+  text-align: center;
 }
 
 .trust-logo-card:hover {
