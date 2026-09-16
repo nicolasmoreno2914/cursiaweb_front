@@ -209,40 +209,53 @@
           </div>
 
           <div class="evo-body">
+            <div class="evo-chart" aria-hidden="true">
+              <svg viewBox="0 0 400 180" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="evoAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#3022F5" stop-opacity="0.35"/>
+                    <stop offset="100%" stop-color="#3022F5" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="evoLineGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#94A3B8"/>
+                    <stop offset="55%" stop-color="#1876FC"/>
+                    <stop offset="100%" stop-color="#29B4FD"/>
+                  </linearGradient>
+                </defs>
+                <path class="evo-chart-area" d="M 20,150 C 35.83,145.33 83.33,132.33 115,122 C 146.67,111.67 179.17,100.83 210,88 C 240.83,75.17 271.67,57.33 300,45 C 328.33,32.67 366.67,19.17 380,14 L 380,180 L 20,180 Z"/>
+                <path class="evo-chart-line" d="M 20,150 C 35.83,145.33 83.33,132.33 115,122 C 146.67,111.67 179.17,100.83 210,88 C 240.83,75.17 271.67,57.33 300,45 C 328.33,32.67 366.67,19.17 380,14"/>
+                <circle class="evo-chart-dot" data-node="2010" cx="20" cy="150" r="4.5"/>
+                <circle class="evo-chart-dot" data-node="2015" cx="115" cy="122" r="4.5"/>
+                <circle class="evo-chart-dot" data-node="2020" cx="210" cy="88" r="4.5"/>
+                <circle class="evo-chart-dot evo-chart-dot-now" data-node="2026" cx="300" cy="45" r="4.5"/>
+                <circle class="evo-chart-dot" data-node="2030" cx="380" cy="14" r="4.5"/>
+              </svg>
+            </div>
+
             <ol class="evo-path">
               <li class="evo-node" data-node="2010">
                 <button type="button" class="evo-node-btn" aria-expanded="false" aria-controls="evo-panel-2010">
-                  <span class="evo-marker" aria-hidden="true"></span>
                   <span class="evo-year">2010</span>
-                  <span class="evo-label">Los contenidos se digitalizan</span>
                 </button>
               </li>
               <li class="evo-node" data-node="2015">
                 <button type="button" class="evo-node-btn" aria-expanded="false" aria-controls="evo-panel-2015">
-                  <span class="evo-marker" aria-hidden="true"></span>
                   <span class="evo-year">2015</span>
-                  <span class="evo-label">Llegan las plataformas educativas</span>
                 </button>
               </li>
               <li class="evo-node" data-node="2020">
                 <button type="button" class="evo-node-btn" aria-expanded="false" aria-controls="evo-panel-2020">
-                  <span class="evo-marker" aria-hidden="true"></span>
                   <span class="evo-year">2020</span>
-                  <span class="evo-label">La educación virtual acelera</span>
                 </button>
               </li>
               <li class="evo-node" data-node="2026">
                 <button type="button" class="evo-node-btn" aria-expanded="false" aria-controls="evo-panel-2026">
-                  <span class="evo-marker" aria-hidden="true"></span>
                   <span class="evo-year">2026<span class="evo-now-tag">Hoy</span></span>
-                  <span class="evo-label">La IA transforma la creación de cursos</span>
                 </button>
               </li>
               <li class="evo-node" data-node="2030">
                 <button type="button" class="evo-node-btn" aria-expanded="false" aria-controls="evo-panel-2030">
-                  <span class="evo-marker" aria-hidden="true"></span>
                   <span class="evo-year">2030+</span>
-                  <span class="evo-label">La próxima generación de instituciones</span>
                 </button>
               </li>
             </ol>

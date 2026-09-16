@@ -83,6 +83,7 @@
 
     var nodes  = Array.prototype.slice.call(card.querySelectorAll('.evo-node'));
     var panels = Array.prototype.slice.call(card.querySelectorAll('.evo-panel-item'));
+    var dots   = Array.prototype.slice.call(card.querySelectorAll('.evo-chart-dot'));
 
     function setActive(key) {
       nodes.forEach(function (n) {
@@ -93,6 +94,9 @@
       });
       panels.forEach(function (p) {
         p.classList.toggle('active', p.getAttribute('data-node') === key);
+      });
+      dots.forEach(function (d) {
+        d.classList.toggle('active', d.getAttribute('data-node') === key);
       });
     }
 
