@@ -157,7 +157,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
 }
 
 .section-head { margin-bottom: 56px; }
-.section-head.center { text-align: center; }
+.section-head.center { text-align: center; margin-left: auto; margin-right: auto; }
 .section-head.center .section-subtitle { margin-left: auto; margin-right: auto; }
 
 /* Emphasis utility — solid brand color, not the mark's gradient */
