@@ -3,9 +3,5 @@
 /consultoria    https://calendar.google.com/calendar/appointments/schedules/AcZssZ3wRjWpN4h-ZxfyJuhri7_fBSOQdIlvFidsRpFzUYIIQITKlC-6etptDmRXIxukW95PAICI5rBv?gv=true   302
 /piloto         https://calendar.google.com/calendar/appointments/schedules/AcZssZ3wRjWpN4h-ZxfyJuhri7_fBSOQdIlvFidsRpFzUYIIQITKlC-6etptDmRXIxukW95PAICI5rBv?gv=true   302
 
-# Rutas internas → redirigen a la página principal
-/privacy        /index.html   302
-/terms          /index.html   302
-
 # SPA fallback: cualquier ruta no encontrada → index.html
 /*              /index.html   200
