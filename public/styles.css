@@ -526,6 +526,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   stroke: #0B1330;
   filter: drop-shadow(0 0 6px rgba(41,180,253,0.85));
 }
+.evo-chart-hit { fill: transparent; cursor: pointer; }
 
 .evo-path {
   list-style: none;
@@ -584,7 +585,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   background: rgba(255,255,255,0.03);
   border: 1px solid var(--border-1);
   padding: 20px 22px;
-  min-height: 128px;
+  min-height: 180px;
 }
 .evo-panel-item { display: none; }
 .evo-panel-item.active { display: block; animation: evo-fade 0.3s ease; }
@@ -616,13 +617,38 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   border: 1px solid var(--border-1);
 }
 
+.evo-panel-stat {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-1);
+}
+.evo-stat-num {
+  flex-shrink: 0;
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--cyan);
+  letter-spacing: -0.01em;
+}
+.evo-stat-label {
+  font-size: 12px;
+  color: var(--text-3);
+  line-height: 1.4;
+}
+
 .evo-footnote {
   position: relative;
   z-index: 1;
   margin: 16px 0 0;
   font-size: 11px;
   color: var(--text-4);
+  line-height: 1.6;
 }
+.evo-footnote a { color: var(--text-3); text-decoration: underline; text-underline-offset: 2px; }
+.evo-footnote a:hover { color: var(--cyan); }
 
 @media (max-width: 600px) {
   .evo-card { padding: 22px 20px 18px; }

@@ -75,7 +75,8 @@
   });
 
   // ----------------------------------------------------------
-  // Hero evolution timeline — click or hover a node to preview it
+  // Hero evolution timeline — click/hover a year or a chart point to
+  // preview it; auto-advances like the course showcase below it.
   // ----------------------------------------------------------
   (function () {
     var card = document.querySelector('.evo-card');
@@ -84,8 +85,14 @@
     var nodes  = Array.prototype.slice.call(card.querySelectorAll('.evo-node'));
     var panels = Array.prototype.slice.call(card.querySelectorAll('.evo-panel-item'));
     var dots   = Array.prototype.slice.call(card.querySelectorAll('.evo-chart-dot'));
+    var hits   = Array.prototype.slice.call(card.querySelectorAll('.evo-chart-hit'));
+    var order  = nodes.map(function (n) { return n.getAttribute('data-node'); });
+    var current = order.indexOf('2026');
+    var autoTimer = null;
+    var isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     function setActive(key) {
+      current = order.indexOf(key);
       nodes.forEach(function (n) {
         var isActive = n.getAttribute('data-node') === key;
         n.classList.toggle('active', isActive);
@@ -100,15 +107,43 @@
       });
     }
 
+    function goToNext() {
+      var next = (current + 1) % order.length;
+      setActive(order[next]);
+    }
+
+    // Year buttons + chart points both drive the same state
     nodes.forEach(function (n) {
       var btn = n.querySelector('.evo-node-btn');
       var key = n.getAttribute('data-node');
       if (!btn) return;
-      btn.addEventListener('click', function () { setActive(key); });
+      btn.addEventListener('click', function () { setActive(key); resetAuto(); });
       btn.addEventListener('mouseenter', function () { setActive(key); });
     });
+    hits.forEach(function (hit) {
+      var key = hit.getAttribute('data-node');
+      hit.addEventListener('click', function () { setActive(key); resetAuto(); });
+      hit.addEventListener('mouseenter', function () { setActive(key); });
+    });
+
+    // Autoplay (6s, skip if reduced-motion)
+    function startAuto() {
+      if (isReducedMotion) return;
+      autoTimer = setInterval(goToNext, 6000);
+    }
+    function resetAuto() {
+      clearInterval(autoTimer);
+      startAuto();
+    }
+
+    // Pause on hover / focus, like the showcase carousel
+    card.addEventListener('mouseenter', function () { clearInterval(autoTimer); });
+    card.addEventListener('mouseleave', function () { startAuto(); });
+    card.addEventListener('focusin',    function () { clearInterval(autoTimer); });
+    card.addEventListener('focusout',   function () { startAuto(); });
 
     setActive('2026');
+    startAuto();
   })();
 
   // ----------------------------------------------------------
