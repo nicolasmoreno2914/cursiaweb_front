@@ -2245,6 +2245,7 @@ textarea.input { resize: vertical; }
 .privacy-row a { color: var(--blue); }
 
 .book-head { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 24px; }
+.book-head[hidden] { display: none; }
 .book-head .icon-badge {
   flex: none;
   width: 40px;
