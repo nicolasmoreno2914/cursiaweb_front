@@ -30,4 +30,9 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://somoscursia.nomaddi.com/recursos/cuanto-cuesta-digitalizar-un-programa-academico</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
