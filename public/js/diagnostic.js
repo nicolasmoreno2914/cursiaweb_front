@@ -76,7 +76,7 @@
     var fill = document.getElementById('qProgressFill');
     if (of) of.textContent = 'Pregunta ' + currentStep + ' de ' + TOTAL_STEPS;
     if (fill) {
-      fill.style.width = (currentStep / TOTAL_STEPS * 100) + '%';
+      fill.style.transform = 'scaleX(' + (currentStep / TOTAL_STEPS) + ')';
       var track = fill.parentElement;
       if (track) {
         track.setAttribute('aria-valuenow', String(currentStep));

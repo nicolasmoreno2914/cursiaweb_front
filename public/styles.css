@@ -324,6 +324,10 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   gap: 10px;
   margin-top: 14px;
 }
+.mobile-menu .mobile-cta .btn {
+  padding: 13px 22px;
+  border-bottom: none;
+}
 
 /* ============================================================
    Hero
@@ -669,7 +673,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
 .float-1 .ic { background: rgba(56,189,248,0.2); color: var(--cyan); }
 .float-2 { bottom: 60px; left: -42px; animation-delay: 1.2s; }
 .float-2 .ic { background: rgba(139,92,246,0.22); color: var(--violet); }
-.float-3 { top: 160px; right: -28px; animation-delay: 0.6s; }
+.float-3 { top: -20px; right: -28px; animation-delay: 0.6s; }
 .float-3 .ic { background: rgba(34,197,94,0.18); color: var(--green); }
 .float-4 { bottom: -18px; right: -10px; animation-delay: 1.8s; }
 .float-4 .ic { background: rgba(20,184,166,0.2); color: var(--teal); }
@@ -1571,7 +1575,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
 .footer-contact:hover { background: var(--card-2); border-color: var(--border-2); }
 .footer-contact svg { width: 14px; height: 14px; color: var(--blue); flex-shrink: 0; }
 
-.footer-col h5 {
+.footer-col h3 {
   font-size: 12px;
   font-weight: 600;
   color: var(--text-3);
@@ -1688,10 +1692,8 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
 }
 
 .trust-label {
-  font-size: 0.75rem;
+  font-size: 0.8125rem;
   font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
   color: var(--text-4);
   margin: 8px 0 0;
 }
@@ -1830,7 +1832,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   letter-spacing: 0.04em;
 }
 
-.case-detail h4 {
+.case-detail h3 {
   font-size: 15.5px;
   font-weight: 600;
 }
@@ -2201,7 +2203,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
 .progress-row { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 16px; }
 .progress-row .q-of { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-3); }
 .q-progress-track { height: 6px; border-radius: 3px; background: var(--card-2); margin-bottom: 28px; overflow: hidden; }
-.q-progress-track .q-progress-fill { display: block; height: 6px; background: var(--blue); border-radius: 3px; transition: width 0.3s ease; }
+.q-progress-track .q-progress-fill { display: block; width: 100%; height: 6px; background: var(--blue); border-radius: 3px; transform: scaleX(0); transform-origin: left; transition: transform 0.3s ease; }
 
 .q-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(20px, 2.2vw, 25px); margin: 0 0 6px; letter-spacing: -0.01em; }
 .q-help { font-size: 14px; color: var(--text-3); margin: 0 0 22px; }
