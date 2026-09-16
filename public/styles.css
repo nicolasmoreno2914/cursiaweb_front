@@ -2404,6 +2404,21 @@ textarea.input { resize: vertical; }
 .compare-col.positive li svg { color: var(--blue); }
 @media (max-width: 700px) { .compare-cols { grid-template-columns: 1fr; } }
 
+/* Data/news article — horizontal bar chart visualizing cited stats.
+   Bar widths are set inline per-instance (either the stat's own % value,
+   or normalized to the largest value in the set when comparing amounts
+   that aren't percentages, e.g. dollar figures). */
+.stat-bars { display: flex; flex-direction: column; gap: 20px; padding: 28px 30px; border-radius: var(--radius-md); border: 1px solid var(--border-1); background: var(--card-1); }
+.stat-bar-row { display: grid; grid-template-columns: 200px 1fr 76px; align-items: center; gap: 16px; }
+.stat-bar-label { font-size: 13.5px; color: var(--text-2); line-height: 1.35; }
+.stat-bar-track { height: 10px; border-radius: 999px; background: var(--border-1); overflow: hidden; }
+.stat-bar-fill { height: 100%; border-radius: 999px; background: linear-gradient(90deg, var(--blue), var(--violet)); }
+.stat-bar-value { font-family: var(--font-mono); font-size: 14px; font-weight: 600; color: var(--text-1); text-align: right; white-space: nowrap; }
+@media (max-width: 620px) {
+  .stat-bar-row { grid-template-columns: 1fr; gap: 6px; }
+  .stat-bar-value { text-align: left; }
+}
+
 /* Editorial pull-quote inside .legal-content */
 .pull-quote {
   margin: 28px 0;
