@@ -2321,3 +2321,29 @@ textarea.input { resize: vertical; }
 .legal-content li { color: var(--text-2); font-size: 16px; line-height: 1.7; margin-bottom: 8px; }
 .legal-content strong { color: var(--text-1); font-weight: 600; }
 .legal-content a { color: var(--blue); text-decoration: underline; text-underline-offset: 2px; }
+
+/* Article reach figure (case-study illustration) */
+.reach-figure {
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-lg);
+  background: var(--bg-2);
+  padding: 32px clamp(16px, 4vw, 40px);
+}
+.reach-figure svg { display: block; width: 100%; height: auto; }
+@media (max-width: 700px) {
+  .reach-figure { padding: 20px 12px; }
+  .reach-figure svg text { display: none; }
+}
+
+/* Editorial pull-quote inside .legal-content */
+.pull-quote {
+  margin: 28px 0;
+  padding-left: 22px;
+  border-left: 3px solid var(--violet);
+  font-family: var(--font-display);
+  font-size: clamp(19px, 2.2vw, 23px);
+  font-weight: 600;
+  line-height: 1.45;
+  color: var(--text-1);
+  letter-spacing: -0.01em;
+}

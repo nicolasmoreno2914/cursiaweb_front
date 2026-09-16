@@ -163,14 +163,78 @@
 </section>
 
 <!-- ============================================================
+     ILUSTRACIÓN: DE UNA SEDE A ALCANCE REGIONAL
+     ============================================================ -->
+<section class="tight" style="padding-top: 0;" aria-hidden="true">
+  <div class="container">
+    <div class="reach-figure reveal">
+      <svg viewBox="0 0 1160 320" role="img" aria-label="Diagrama que muestra a Inandina, en Villavicencio, conectada mediante líneas radiales a estudiantes distribuidos en distintas regiones, representando el alcance ganado sin abrir sedes nuevas.">
+        <defs>
+          <linearGradient id="reachLine" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#3022F5"/>
+            <stop offset="100%" stop-color="#29B4FD"/>
+          </linearGradient>
+          <radialGradient id="reachCore" cx="35%" cy="35%" r="70%">
+            <stop offset="0%" stop-color="#4A3BFF"/>
+            <stop offset="100%" stop-color="#3022F5"/>
+          </radialGradient>
+        </defs>
+
+        <!-- radiating connection lines -->
+        <g stroke="url(#reachLine)" stroke-width="1.5" opacity="0.55">
+          <line x1="230" y1="160" x2="480" y2="60"/>
+          <line x1="230" y1="160" x2="560" y2="110"/>
+          <line x1="230" y1="160" x2="620" y2="200"/>
+          <line x1="230" y1="160" x2="540" y2="260"/>
+          <line x1="230" y1="160" x2="720" y2="70"/>
+          <line x1="230" y1="160" x2="780" y2="170"/>
+          <line x1="230" y1="160" x2="700" y2="250"/>
+          <line x1="230" y1="160" x2="860" y2="120"/>
+          <line x1="230" y1="160" x2="900" y2="220"/>
+          <line x1="230" y1="160" x2="980" y2="90"/>
+          <line x1="230" y1="160" x2="1020" y2="190"/>
+        </g>
+
+        <!-- distributed student nodes -->
+        <g fill="#29B4FD">
+          <circle cx="480" cy="60" r="5"/>
+          <circle cx="560" cy="110" r="4"/>
+          <circle cx="620" cy="200" r="6"/>
+          <circle cx="540" cy="260" r="4"/>
+          <circle cx="720" cy="70" r="5"/>
+          <circle cx="780" cy="170" r="4"/>
+          <circle cx="700" cy="250" r="5"/>
+          <circle cx="860" cy="120" r="6"/>
+          <circle cx="900" cy="220" r="4"/>
+          <circle cx="980" cy="90" r="5"/>
+          <circle cx="1020" cy="190" r="4"/>
+        </g>
+
+        <!-- Inandina origin node -->
+        <circle cx="230" cy="160" r="34" fill="url(#reachCore)"/>
+        <circle cx="230" cy="160" r="34" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+        <text x="230" y="222" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#46516E">Villavicencio</text>
+        <text x="230" y="240" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#6C7690">1 sede física</text>
+
+        <text x="1020" y="255" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#46516E">+250 estudiantes</text>
+        <text x="1020" y="273" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="#6C7690">sin nueva sede</text>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      DESARROLLO DEL CASO
      ============================================================ -->
-<section class="tight" aria-labelledby="problema-heading">
+<section class="tight" style="padding-top: 0;" aria-labelledby="problema-heading">
   <div class="container">
     <div class="legal-content reveal" style="margin: 0 auto;">
       <h2 id="problema-heading">Una institución técnica atada a su sede física.</h2>
       <p>Inandina necesitaba llevar su oferta de programas técnicos más allá de su sede física en Villavicencio. Como le pasa a la mayoría de instituciones técnicas y tecnológicas en Colombia, cada estudiante nuevo fuera de su zona de influencia directa significaba un problema logístico, no solo académico: sin presencia digital real, la única forma de crecer era abrir infraestructura nueva — más arriendo, más planta docente presencial, más tiempo antes de que la inversión se pagara sola.</p>
-      <p>Inandina ya contaba con Moodle, pero lo usaba principalmente como repositorio: un lugar donde subir documentos, no una experiencia de aprendizaje completa que un estudiante pudiera recorrer de forma autónoma. Ese fue exactamente el reto que definió el modelo de producción que Cursia usa hoy con cada institución nueva.</p>
+
+      <blockquote class="pull-quote">"Inandina ya tenía Moodle — pero lo usaba como repositorio, no como una experiencia de aprendizaje."</blockquote>
+
+      <p>Ese fue exactamente el reto que definió el modelo de producción que Cursia usa hoy con cada institución nueva.</p>
 
       <h2 id="proceso-heading">Cuatro etapas, con el equipo académico de Inandina revisando cada una.</h2>
     </div>
