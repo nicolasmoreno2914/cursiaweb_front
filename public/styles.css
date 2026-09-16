@@ -2388,6 +2388,9 @@ textarea.input { resize: vertical; }
 @media (max-width: 860px) { .recursos-secondary-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .recursos-secondary-grid { grid-template-columns: 1fr; } }
 
+.recursos-guides-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 600px) { .recursos-guides-grid { grid-template-columns: 1fr; } }
+
 /* Repositorio vs. experiencia comparison (article component) */
 .compare-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 .compare-col { padding: 26px 28px; border-radius: var(--radius-md); border: 1px solid var(--border-1); }

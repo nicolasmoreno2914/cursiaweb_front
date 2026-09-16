@@ -45,4 +45,24 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://somoscursia.nomaddi.com/recursos/ia-en-la-educacion-virtual-colombia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://somoscursia.nomaddi.com/recursos/desercion-en-cursos-virtuales-evidencia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://somoscursia.nomaddi.com/recursos/inversion-edtech-colombia</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://somoscursia.nomaddi.com/recursos/capacitacion-corporativa-digital-datos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
 </urlset>
