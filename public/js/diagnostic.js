@@ -144,7 +144,18 @@
     }
     currentStep = next;
     renderStep();
+    scrollToStepTop();
   };
+
+  // Keeps the question title + progress bar in view when advancing/going
+  // back — without this, a long option list can leave the next question's
+  // text scrolled off-screen above the viewport.
+  function scrollToStepTop() {
+    var isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var target = document.querySelector('.diag-tabs');
+    if (!target) return;
+    target.scrollIntoView({ behavior: isReducedMotion ? 'auto' : 'smooth', block: 'start' });
+  }
 
   // Roving keyboard focus (Left/Right/Up/Down) between option cards in the active grid.
   document.querySelectorAll('#p1 .opt-grid').forEach(function (grid) {

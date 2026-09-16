@@ -2153,6 +2153,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
 .diag-tabs {
   display: flex;
   border-bottom: 1px solid var(--border-1);
+  scroll-margin-top: 90px;
 }
 .diag-tab {
   flex: 1;
