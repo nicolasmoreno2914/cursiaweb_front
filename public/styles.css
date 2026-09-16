@@ -340,6 +340,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
   gap: 64px;
   align-items: center;
 }
+.hero-grid > * { min-width: 0; }
 @media (max-width: 1000px) {
   .hero-grid { grid-template-columns: 1fr; gap: 56px; }
 }
@@ -451,6 +452,7 @@ section.tight { padding: clamp(60px, 7vw, 100px) 0; }
 }
 .mockup-bar .url {
   margin-left: 12px;
+  min-width: 0;
   font-family: var(--font-mono);
   font-size: 12px;
   color: var(--text-4);
