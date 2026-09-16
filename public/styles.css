@@ -2380,12 +2380,26 @@ textarea.input { resize: vertical; }
 .case-facts .fact-label { font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--text-4); }
 .case-facts .fact-value { font-size: 15px; font-weight: 600; color: var(--text-1); }
 
-/* Recursos hub — secondary articles grid (2 columns, collapses on mobile
-   via the same breakpoint .problem-grid already uses; kept as a real
-   class instead of an inline grid-template-columns override, which
+/* Recursos hub — secondary articles grid (3 columns, collapses to 2 then 1
+   on mobile via the same breakpoint .problem-grid already uses; kept as a
+   real class instead of an inline grid-template-columns override, which
    would out-specificity the responsive media queries) */
-.recursos-secondary-grid { grid-template-columns: repeat(2, 1fr); }
+.recursos-secondary-grid { grid-template-columns: repeat(3, 1fr); }
+@media (max-width: 860px) { .recursos-secondary-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 600px) { .recursos-secondary-grid { grid-template-columns: 1fr; } }
+
+/* Repositorio vs. experiencia comparison (article component) */
+.compare-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.compare-col { padding: 26px 28px; border-radius: var(--radius-md); border: 1px solid var(--border-1); }
+.compare-col.negative { background: var(--card-1); }
+.compare-col.positive { background: var(--blue-soft); border-color: var(--border-glow); }
+.compare-col h3 { font-family: var(--font-display); font-size: 16px; font-weight: 600; margin-bottom: 16px; }
+.compare-col ul { display: flex; flex-direction: column; gap: 12px; }
+.compare-col li { font-size: 14.5px; color: var(--text-2); display: flex; gap: 8px; align-items: flex-start; line-height: 1.5; }
+.compare-col li svg { width: 15px; height: 15px; flex-shrink: 0; margin-top: 2px; }
+.compare-col.negative li svg { color: var(--text-4); }
+.compare-col.positive li svg { color: var(--blue); }
+@media (max-width: 700px) { .compare-cols { grid-template-columns: 1fr; } }
 
 /* Editorial pull-quote inside .legal-content */
 .pull-quote {
