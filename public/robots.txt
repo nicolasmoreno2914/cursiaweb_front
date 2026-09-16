@@ -1,4 +1,43 @@
 User-agent: *
 Allow: /
 
+# Crawlers de motores de respuesta con IA — bienvenidos explícitamente.
+# Nada aquí bloquea nada que el wildcard de arriba ya permita; esto solo
+# declara la intención en vez de dejarla implícita.
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 Sitemap: https://somoscursia.nomaddi.com/sitemap.xml

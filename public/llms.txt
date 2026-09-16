@@ -1,0 +1,39 @@
+# Cursia
+
+> Cursia convierte los programas académicos de instituciones educativas en cursos digitales completos — estructura pedagógica, video, actividades interactivas y evaluaciones — listos para instalar en Moodle. Es una compañía colombiana, unidad de negocio de Nomaddi S.A.S., con sede en Villavicencio (Meta) y trabajo en toda Latinoamérica.
+
+Cursia es un servicio de producción "hecho por nosotros", no una plataforma LMS ni un competidor de Moodle: el equipo diseña, produce e implementa cada curso, y el resultado se instala directamente en el Moodle que la institución ya tiene. Fue fundada por Nicolás Moreno (Director de Tecnología y Producto) y Javier Moreno (Director Comercial y de Alianzas Institucionales).
+
+## Páginas principales
+
+- [Inicio](https://somoscursia.nomaddi.com/): qué hace Cursia, cómo funciona el proceso, planes y precios, preguntas frecuentes.
+- [Nosotros](https://somoscursia.nomaddi.com/nosotros): equipo fundador, origen del modelo, relación con Nomaddi S.A.S.
+- [Diagnóstico gratuito](https://somoscursia.nomaddi.com/diagnostico): evaluación de 10 preguntas (menos de 3 minutos) para instituciones que quieren digitalizar su oferta académica.
+- [Recursos](https://somoscursia.nomaddi.com/recursos): casos reales, datos del sector y guías.
+
+## Planes y precios
+
+Todos los planes incluyen kick-off, estructuración académica, videos educativos, actividades H5P, evaluaciones e integración con Moodle. Precio final ajustado en el diagnóstico según duración y complejidad de cada programa.
+
+- **Inicio**: 4 cursos — $4.200.000 COP ($1.050.000 / curso).
+- **Crecimiento**: 8 cursos — $7.200.000 COP ($900.000 / curso).
+- **Escala**: 12 cursos — $9.600.000 COP ($800.000 / curso) — el de mejor valor por curso.
+
+## Casos y datos reales
+
+- [Caso Inandina](https://somoscursia.nomaddi.com/recursos/caso-inandina): institución técnica de Villavicencio — 23 programas digitalizados, +270 cursos, +250 estudiantes en el primer mes, sin abrir sede nueva.
+- [El crecimiento de la educación virtual en Colombia, en números](https://somoscursia.nomaddi.com/recursos/crecimiento-educacion-virtual-colombia): una de cada cuatro matrículas de educación superior en Colombia ya es virtual, con 14,4% de crecimiento anual (SNIES).
+- [IA en la educación virtual en Colombia: uso real vs. preparación](https://somoscursia.nomaddi.com/recursos/ia-en-la-educacion-virtual-colombia): 91% de los estudiantes colombianos ya usa IA, pero solo el 26% de las instituciones tiene un marco formal.
+- [Por qué se abandona un curso virtual: lo que dice la evidencia](https://somoscursia.nomaddi.com/recursos/desercion-en-cursos-virtuales-evidencia): la deserción acumulada en programas técnicos llega al 33,5% en Colombia.
+- [Quién está invirtiendo en edtech en Colombia, y cuánto](https://somoscursia.nomaddi.com/recursos/inversion-edtech-colombia): Platzi cerró US$60M liderados por Prosus; Ubits superó los US$25M respaldado por Y Combinator.
+- [La capacitación corporativa ya es digital: los números](https://somoscursia.nomaddi.com/recursos/capacitacion-corporativa-digital-datos): 93% de las empresas ya usa o planea usar eLearning; IBM reporta US$30 de productividad por cada dólar invertido.
+
+## Guías
+
+- [Cuánto cuesta digitalizar un programa académico](https://somoscursia.nomaddi.com/recursos/cuanto-cuesta-digitalizar-un-programa-academico): precios reales y qué determina el costo final.
+- [Moodle como repositorio vs. experiencia de aprendizaje](https://somoscursia.nomaddi.com/recursos/moodle-repositorio-vs-experiencia-aprendizaje): señales concretas para distinguir un repositorio de PDFs de un curso digital real.
+
+## Contacto
+
+- Diagnóstico gratuito: https://somoscursia.nomaddi.com/diagnostico
+- Correo: nicolas@nomaddi.com
