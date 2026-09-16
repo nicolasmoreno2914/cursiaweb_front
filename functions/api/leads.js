@@ -8,11 +8,11 @@
  * involved. Only on a confirmed write does it return a safe response the
  * frontend uses to decide whether to reveal the scheduling link.
  *
- * This reuses the exact same spreadsheet and service account already
- * configured for the sister landing page (landing_cursia /
- * cursia-landing), just a separate sheet tab — see SHEET_NAME below — so
- * leads from both sites are easy to tell apart without needing a second
- * Google Cloud service account.
+ * This writes to the centralized Cursia leads spreadsheet (shared across
+ * sites), using the same service account already configured for the
+ * sister landing page (landing_cursia / cursia-landing) — just a separate
+ * sheet tab, see SHEET_NAME below — so leads from both sites are easy to
+ * tell apart without needing a second Google Cloud service account.
  *
  * Required environment (see .dev.vars.example):
  *   GOOGLE_SERVICE_ACCOUNT_EMAIL        - service account's client_email
@@ -25,16 +25,15 @@
  * Setup: this project's Cloudflare Pages settings need the same
  * GOOGLE_SERVICE_ACCOUNT_EMAIL / GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY values
  * already set on the cursia-landing Pages project (Settings → Environment
- * variables, or `wrangler pages secret put <NAME>`). The spreadsheet is
- * already shared with that service account as Editor — nothing to redo in
- * Google Cloud.
+ * variables, or `wrangler pages secret put <NAME>`). The spreadsheet must
+ * be shared with that service account as Editor.
  */
 
 // ---------------------------------------------------------------------------
-// Fixed spreadsheet + sheet layout — same spreadsheet as cursia-landing,
-// separate tab so the two sites' leads never mix columns.
+// Fixed spreadsheet + sheet layout — centralized Cursia leads spreadsheet,
+// separate tab per site so leads never mix columns.
 // ---------------------------------------------------------------------------
-const SPREADSHEET_ID = '120JGHxoveQSi1ETkFhRDrMIj4CNViacU6F9x5iKKZAg';
+const SPREADSHEET_ID = '1R0ekG979ExUxDXIXv2sl-8wzP4cvvK-j2zgiT8NmKsI';
 const SHEET_NAME = 'Leads — somoscursia';
 
 // Column order — keep in sync with the row built in `buildRow()` below.
