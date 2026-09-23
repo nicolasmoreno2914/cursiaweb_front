@@ -55,14 +55,17 @@
     var p = panels();
     if (p.loading) p.loading.hidden = true;
     if (p.error) p.error.hidden = true;
+    var confirmBar = document.getElementById('confirmBar');
 
     if (qualified) {
       if (p.unqualified) p.unqualified.hidden = true;
       if (p.qualified) p.qualified.hidden = false;
       renderQualified();
+      if (confirmBar) confirmBar.hidden = false;
     } else {
       if (p.qualified) p.qualified.hidden = true;
       if (p.unqualified) p.unqualified.hidden = false;
+      if (confirmBar) confirmBar.hidden = true;
     }
 
     var section = document.getElementById('diagnostico');
