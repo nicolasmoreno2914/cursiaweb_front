@@ -323,15 +323,13 @@
               <p class="muted">Selecciona un horario para conversar con nuestro equipo y revisar las alternativas de implementación.</p>
             </div>
           </div>
+          <p class="q-help" style="margin-bottom: 12px;">Elige un horario abajo. Cuando el calendario confirme tu reserva, usa el botón <strong>"Ya agendé mi cita"</strong> que queda fijo en la parte inferior de la pantalla para continuar.</p>
           <div class="cal-container" id="calContainer"></div>
           <div class="trust-row">
             <span class="tag-outline">Conversación inicial sin costo</span>
             <span class="tag-outline">Revisión del contexto de tu institución</span>
             <span class="tag-outline">Recomendaciones iniciales</span>
             <span class="tag-outline">Sin compromiso de contratación</span>
-          </div>
-          <div class="diag-actions" style="justify-content: center; margin-top: 20px;">
-            <a class="btn btn-primary" href="/gracias">Ya agendé mi cita<svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
           </div>
         </div>
 
@@ -434,6 +432,15 @@
     </div>
   </div>
 </footer>
+
+<!-- Fixed confirmation bar — shown only once a qualified lead sees the
+     calendar (toggled from schedule.js). Lives outside the reveal-animated
+     shell so it always docks to the viewport, regardless of how far the
+     person has scrolled into the embedded calendar. -->
+<div class="confirm-bar" id="confirmBar" hidden>
+  <span class="confirm-bar-text">¿Ya elegiste un horario?</span>
+  <a class="btn btn-primary" href="/gracias">Ya agendé mi cita<svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+</div>
 
 <script src="js/diagnostic.js"></script>
 <script src="js/schedule.js"></script>
