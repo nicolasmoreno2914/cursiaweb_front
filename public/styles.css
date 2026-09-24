@@ -2305,6 +2305,51 @@ textarea.input { resize: vertical; }
   .confirm-bar .btn { width: 100%; justify-content: center; }
 }
 
+/* Booking check-in modal — see the comment above #bookingModal in
+   diagnostico.html for why this exists alongside the confirm bar. */
+.booking-modal { position: fixed; inset: 0; z-index: 80; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.booking-modal[hidden] { display: none; }
+.booking-modal-backdrop { position: absolute; inset: 0; background: rgba(11, 19, 48, 0.45); }
+.booking-modal-card {
+  position: relative;
+  background: var(--card-elevated);
+  border: 1px solid var(--border-1);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 30px 70px -25px rgba(11, 19, 48, 0.45);
+  padding: 32px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  animation: booking-modal-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@media (prefers-reduced-motion: reduce) { .booking-modal-card { animation: none; } }
+@keyframes booking-modal-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: none; }
+}
+.booking-modal-card .icon-badge { width: 40px; height: 40px; border-radius: 50%; background: var(--blue-soft); color: var(--blue); display: grid; place-items: center; margin: 0 auto 14px; }
+.booking-modal-card h2 { font-family: var(--font-display); font-weight: 600; font-size: 22px; margin: 0 0 8px; letter-spacing: -0.01em; }
+.booking-modal-card p.muted { font-size: 14.5px; color: var(--text-3); margin: 0 0 24px; }
+.booking-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--border-1);
+  background: var(--card-1);
+  color: var(--text-3);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+.booking-modal-actions { display: flex; gap: 10px; justify-content: center; }
+@media (max-width: 480px) {
+  .booking-modal-actions { flex-direction: column-reverse; }
+  .booking-modal-actions .btn { width: 100%; justify-content: center; }
+}
+
 .diag-intro-note {
   display: flex;
   justify-content: center;

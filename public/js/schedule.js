@@ -10,6 +10,55 @@
 (function () {
   var SCHEDULE_URL = 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ3wRjWpN4h-ZxfyJuhri7_fBSOQdIlvFidsRpFzUYIIQITKlC-6etptDmRXIxukW95PAICI5rBv?gv=true';
 
+  // Google's appointment iframe doesn't tell the parent page when someone
+  // finishes booking (no postMessage on completion), so this is a timed
+  // guess, not a real detection. First nudge at 35s — long enough that
+  // someone still browsing times won't be interrupted, short enough to
+  // catch most people right after they book. One more nudge at 2 minutes
+  // for slower bookings; then it stops so it doesn't nag.
+  var CHECKIN_DELAYS_MS = [35000, 125000];
+  var checkinTimers = [];
+
+  function clearCheckinTimers() {
+    checkinTimers.forEach(function (id) { clearTimeout(id); });
+    checkinTimers = [];
+  }
+
+  function scheduleCheckins() {
+    clearCheckinTimers();
+    CHECKIN_DELAYS_MS.forEach(function (delay) {
+      checkinTimers.push(setTimeout(showBookingModal, delay));
+    });
+  }
+
+  function showBookingModal() {
+    var modal = document.getElementById('bookingModal');
+    var confirmBar = document.getElementById('confirmBar');
+    // Don't interrupt if the person already left this step, or the calendar
+    // panel isn't the one showing.
+    if (!modal || !confirmBar || confirmBar.hidden) return;
+    modal.hidden = false;
+    var dismissBtn = modal.querySelector('.booking-modal-close');
+    if (dismissBtn) dismissBtn.focus();
+  }
+
+  function hideBookingModal() {
+    var modal = document.getElementById('bookingModal');
+    if (modal) modal.hidden = true;
+  }
+
+  function initBookingModal() {
+    var modal = document.getElementById('bookingModal');
+    if (!modal || modal.dataset.wired) return;
+    modal.dataset.wired = 'true';
+    modal.querySelectorAll('[data-modal-dismiss]').forEach(function (el) {
+      el.addEventListener('click', hideBookingModal);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hidden) hideBookingModal();
+    });
+  }
+
   function renderQualified() {
     var container = document.getElementById('calContainer');
     if (!container) return;
@@ -62,10 +111,14 @@
       if (p.qualified) p.qualified.hidden = false;
       renderQualified();
       if (confirmBar) confirmBar.hidden = false;
+      initBookingModal();
+      scheduleCheckins();
     } else {
       if (p.qualified) p.qualified.hidden = true;
       if (p.unqualified) p.unqualified.hidden = false;
       if (confirmBar) confirmBar.hidden = true;
+      clearCheckinTimers();
+      hideBookingModal();
     }
 
     var section = document.getElementById('diagnostico');

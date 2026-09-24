@@ -442,6 +442,27 @@
   <a class="btn btn-primary" href="/gracias">Ya agendé mi cita<svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
 </div>
 
+<!-- Booking check-in modal — Google's calendar iframe doesn't expose a
+     postMessage event on successful booking, so there's no reliable way to
+     know when someone finishes. This asks automatically a while after the
+     calendar appears, instead of relying only on the person noticing the
+     confirm bar. Timing is driven from schedule.js. -->
+<div class="booking-modal" id="bookingModal" hidden>
+  <div class="booking-modal-backdrop" data-modal-dismiss></div>
+  <div class="booking-modal-card" role="dialog" aria-modal="true" aria-labelledby="bookingModalTitle">
+    <button type="button" class="booking-modal-close" aria-label="Cerrar" data-modal-dismiss>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <span class="icon-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg></span>
+    <h2 id="bookingModalTitle">¿Ya reservaste tu horario?</h2>
+    <p class="muted">Si ya elegiste una hora en el calendario, confírmanos para que preparemos la reunión con el contexto de tu institución.</p>
+    <div class="booking-modal-actions">
+      <button type="button" class="btn btn-ghost" data-modal-dismiss>Todavía no</button>
+      <a class="btn btn-primary" href="/gracias">Sí, ya agendé<svg class="arrow" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</div>
+
 <script src="js/diagnostic.js"></script>
 <script src="js/schedule.js"></script>
 <script src="main.js"></script>
