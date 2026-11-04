@@ -13,10 +13,22 @@
   var grossRevenueEl = document.getElementById('calcGrossRevenue');
   var contributionEl = document.getElementById('calcContribution');
   var breakevenEl = document.getElementById('calcBreakeven');
+  var paybackTimeEl = document.getElementById('calcPaybackTime');
   var balanceEl = document.getElementById('calcBalance');
 
   function formatCOP(value) {
     return '$' + Math.round(value).toLocaleString('es-CO');
+  }
+
+  // Assumes the same enrollment repeats every semester, so the investment
+  // is paid off in proportional slices of each semester's contribution
+  // (6 months per semester) rather than all at once.
+  function formatPaybackTime(investmentAmount, contributionPerSemester) {
+    if (contributionPerSemester <= 0) return '—';
+    var months = Math.max(1, Math.ceil((investmentAmount / contributionPerSemester) * 6));
+    var label = months + (months === 1 ? ' mes' : ' meses');
+    if (months > 6) label += ' (~' + (months / 6).toFixed(1) + ' semestres)';
+    return label;
   }
 
   function paintSliderFill(input) {
@@ -47,6 +59,7 @@
     grossRevenueEl.textContent = formatCOP(grossRevenue);
     contributionEl.textContent = formatCOP(contribution);
     breakevenEl.textContent = breakeven.toLocaleString('es-CO');
+    paybackTimeEl.textContent = formatPaybackTime(investmentAmount, contribution);
     balanceEl.textContent = formatCOP(balance);
     balanceEl.classList.toggle('calc-result-negative', balance < 0);
 
