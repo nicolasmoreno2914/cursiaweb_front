@@ -923,6 +923,85 @@
 </section>
 
 <!-- ============================================================
+     CALCULADORA DE RETORNO
+     ============================================================ -->
+<section id="calculadora" aria-labelledby="calc-heading">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="section-eyebrow"><span class="dot" aria-hidden="true"></span>Calculadora</span>
+      <h2 id="calc-heading" class="section-title">Calcula el retorno de digitalizar tu oferta académica.</h2>
+      <p class="section-subtitle">Ajusta los valores de tu institución y mira cuántos estudiantes necesitas para recuperar la inversión en un semestre.</p>
+    </div>
+
+    <div class="calc-shell reveal">
+      <div class="calc-grid">
+        <div class="calc-inputs">
+          <div class="calc-field">
+            <div class="calc-field-head">
+              <label for="calcTuition">Valor del semestre por estudiante</label>
+              <span class="calc-value" id="calcTuitionValue">$1.300.000</span>
+            </div>
+            <input type="range" class="calc-slider" id="calcTuition" min="200000" max="5000000" step="50000" value="1300000" aria-describedby="calcTuitionValue" />
+          </div>
+
+          <div class="calc-field">
+            <div class="calc-field-head">
+              <label for="calcStudents">Estudiantes matriculados</label>
+              <span class="calc-value" id="calcStudentsValue">50</span>
+            </div>
+            <input type="range" class="calc-slider" id="calcStudents" min="5" max="500" step="5" value="50" aria-describedby="calcStudentsValue" />
+          </div>
+
+          <div class="calc-field">
+            <div class="calc-field-head">
+              <label for="calcInvestment">Inversión inicial en Cursia</label>
+              <span class="calc-value" id="calcInvestmentValue">$9.600.000</span>
+            </div>
+            <input type="range" class="calc-slider" id="calcInvestment" min="4200000" max="20000000" step="100000" value="9600000" aria-describedby="calcInvestmentValue" />
+          </div>
+
+          <div class="calc-field">
+            <div class="calc-field-head">
+              <label for="calcMargin">Margen de contribución estimado</label>
+              <span class="calc-value" id="calcMarginValue">60%</span>
+            </div>
+            <input type="range" class="calc-slider" id="calcMargin" min="20" max="90" step="5" value="60" aria-describedby="calcMarginValue" />
+          </div>
+        </div>
+
+        <div class="calc-results">
+          <div class="calc-result">
+            <span class="calc-result-label">Ingresos brutos / semestre</span>
+            <span class="calc-result-value" id="calcGrossRevenue">$65.000.000</span>
+          </div>
+          <div class="calc-result">
+            <span class="calc-result-label">Contribución estimada</span>
+            <span class="calc-result-value" id="calcContribution">$39.000.000</span>
+          </div>
+          <div class="calc-result">
+            <span class="calc-result-label">Estudiantes para recuperar la inversión</span>
+            <span class="calc-result-value" id="calcBreakeven">20</span>
+          </div>
+          <div class="calc-result">
+            <span class="calc-result-label">Saldo después de inversión</span>
+            <span class="calc-result-value calc-result-highlight" id="calcBalance">$24.000.000</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="calc-disclaimer">Modelo simplificado de un semestre. El margen de contribución representa el porcentaje de ingresos que queda después de los costos variables considerados — no es utilidad neta ni un pronóstico de ingresos garantizados. Úsalo como referencia para dimensionar el retorno potencial, no como proyección financiera.</p>
+
+      <div class="calc-cta">
+        <a class="btn btn-primary" href="/diagnostico">
+          Validar este escenario con un diagnóstico
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
      FAQ
      ============================================================ -->
 <section id="faq" aria-labelledby="faq-heading">
@@ -1135,6 +1214,7 @@
   </div>
 </footer>
 
+<script src="js/calculator.js"></script>
 <script src="main.js"></script>
 </body>
 </html>
